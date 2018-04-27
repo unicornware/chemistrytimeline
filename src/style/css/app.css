@@ -1,0 +1,64 @@
+@import url(..css/normalize.min.css);
+/* HELPER CLASSES -- HELPERS.SASS */
+/*
+  * Helper class that functions as a container.
+  *
+  * 1. Uses the max-width variable to set the maximum width. */
+.wrapper {
+  height: 100%;
+  width: 100%;
+  /* 1 */
+  max-width: 95%; }
+
+/*
+  * Helper class to truncate and add ellipsis to a string too long for it to
+  * fit on a single line.
+  * 1. Prevent content from wrapping, forcing it on a single line.
+  * 2. Add ellipsis at the end of the line. */
+.ellipsis {
+  /* 1 */
+  white-space: nowrap;
+  /* 2 */
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+/* BEGIN BASE STYLES -- BASE-DIR.SASS */
+/* COMMON STYLES -- COMMON.SASS */
+* {
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s; }
+
+*,
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+::-webkit-scrollbar {
+  display: none; }
+
+html, body {
+  font-family: "";
+  color: #000;
+  margin: 0; }
+
+h1, h2, h3, h4, h5, h6, ol, ul {
+  font-weight: 700; }
+
+p, a, li {
+  font-weight: 400; }
+
+a:hover, a:active, a:focus, button:hover, button:active, button:focus {
+  cursor: pointer; }
+
+a {
+  text-decoration: none; }
+  a:hover, a:active, a:focus {
+    font-weight: 600; }
+
+button {
+  border: none;
+  outline: none; }
+
+/* FONTS - FONTS.SASS */
+/* BEGIN COMPONENT STYLES -- COMPONENTS-DIR.SASS */
+/* BEGIN VIEW SPECIFIC STYLES -- VIEWS-DIR.SASS */

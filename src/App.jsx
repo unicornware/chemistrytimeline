@@ -1,5 +1,5 @@
 //react imports
-import React, { Component } from 'react';
+import * as React from 'react';
 
 //react-router imports
 import { BrowserRouter, Route } from 'react-router-dom';
@@ -13,7 +13,7 @@ import Analytics from 'react-router-ga';
 //style imports
 import './style/css/app.min.css';
 
-export default class App extends Component {
+export default class App extends React.Component {
   render() {
     return (
       <BrowserRouter>

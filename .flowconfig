@@ -2,7 +2,9 @@
 /src/__tests__
 
 [include]
-/src/
+/src/App
+/src/components/*.jsx
+/src/views/*.jsx
 
 [libs]
 

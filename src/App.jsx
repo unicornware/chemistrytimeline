@@ -1,3 +1,5 @@
+// @flow
+
 //react imports
 import * as React from 'react';
 
@@ -11,6 +13,7 @@ import * as routes from './config/routes.js';
 import Analytics from 'react-router-ga';
 
 //style imports
+import './style/css/normalize.min.css';
 import './style/css/app.min.css';
 
 export default class App extends React.Component {

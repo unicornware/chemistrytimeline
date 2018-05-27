@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/react-fontawesome": "0.0.20",
     "flow-bin": "^0.72.0",
-    "jquery": "^3.3.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
-    "react-feather": "^1.1.0",
     "react-router-dom": "^4.2.2",
     "react-router-ga": "^1.0.0",
     "react-scripts": "1.1.4"

@@ -1,0 +1,25 @@
+/* MODAL STYLES - MODAL.SASS */
+
+.modal {
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  .modal-guts {
+    @include flex(row, stretch, flex-start);
+
+    height: 50%;
+    width: 80%;
+  }
+}
+
+.modal-closed {
+  display: none;
+}
+
+.modal-open {
+  display: flex;
+}

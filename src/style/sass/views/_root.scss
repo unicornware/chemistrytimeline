@@ -1,0 +1,19 @@
+/* ROOT CONTAINER STYLES - ROOT.SASS */
+
+#root {
+  @include flex(column, center, space-between);
+
+  #root-wrapper {
+    @include flex(column, center, flex-start);
+
+    h1 {
+      font-size: 2.5em;
+      margin: 1.5em 0 0.375em;
+    }
+
+    p {
+      font-size: 1.25em;
+      margin: 0.375em 0 2em;
+    }
+  }
+}

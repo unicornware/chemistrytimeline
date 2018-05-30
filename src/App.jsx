@@ -1,32 +1,28 @@
-// @flow
+//react
+import * as React from "react";
 
-//react imports
-import * as React from 'react';
+//react-router
+import { BrowserRouter } from "react-router-dom";
 
-//react-router imports
-import { BrowserRouter, Route } from 'react-router-dom';
+// components
+import Navigation from "./components/Navigation.jsx";
+import Modal from "./components/Modal.jsx";
 
-//config imports
-import * as routes from './config/routes.js';
-
-//google analytics
-import Analytics from 'react-router-ga';
-
-//style imports
-import './style/css/normalize.min.css';
-import './style/css/app.min.css';
+//style
+import "./style/css/normalize.min.css";
+import "./style/css/app.min.css";
 
 export default class App extends React.Component {
   render() {
     return (
       <BrowserRouter>
-        <Analytics id="" debug>
-          <React.Fragment>
-            <p>
-              To get started, edit <code>src/App.jsx</code> and save to reload.
-            </p>
-          </React.Fragment>
-        </Analytics>
+        <React.Fragment>
+          <div className="wrapper" id="root-wrapper">
+            <h1>Landmarks Timeline</h1>
+            <p>Click the years to check out the history of chemistry</p>
+            <Navigation />
+          </div>
+        </React.Fragment>
       </BrowserRouter>
     );
   }

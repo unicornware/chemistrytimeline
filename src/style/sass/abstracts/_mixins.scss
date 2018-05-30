@@ -1,0 +1,71 @@
+// MIXINS
+
+/**
+ * Display flex mixin where flex-wrap defaults to wrap.
+ * @parameter {string} $flexDirection - flex-direction
+ * @param {string} $alignItems - align-items
+ * @param {string} $justifyContent - justify-content
+*/
+@mixin flex($flexDirection, $alignItems, $justifyContent) {
+  display: flex !important;
+  flex-wrap: wrap;
+  flex-direction: $flexDirection;
+  align-items: $alignItems;
+  justify-content: $justifyContent;
+
+  @content;
+}
+
+/**
+ * Background image mixin
+ * @param {string} $url - image url
+ * @param {string} $pos - background-position
+ * @param {string} $size - background-size
+*/
+@mixin set-bkg-img($url, $pos, $size) {
+  background: {
+    image: url('#{$url}');
+    position: $pos;
+    repeat: no-repeat;
+    size: $size;
+  }
+
+  @content;
+}
+
+/**
+ * Mixin that bundles &:hover, &:active, and &:focus
+ */
+@mixin hocus {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+
+/**
+ * Mixin that sets the initial background color of an element,
+ * and the element's background color when it is hovered over.
+ * The hover color defaults to a shade 5% darker than the argument color.
+ * Uses the hocus mixin to set the hover color
+ * @param {string} $color - color to set
+*/
+@mixin set-bkg-color-and-hover($color) {
+  background-color: $color;
+
+  @include hocus {
+    background-color: darken($color, 5%);
+  }
+}
+
+/**
+ * Mixin for transitions.
+ * @param {string} $prop - transition-propery
+ * @param {string} $duration - transition-duration
+ * @param {string} $timing - transition-timing-function
+ * @param {string} $delay - transition-delay
+*/
+@mixin transition($prop, $duration, $timing, $delay) {
+  transition: $prop $duration $timing $delay;
+}

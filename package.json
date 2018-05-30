@@ -1,15 +1,14 @@
 {
-  "name": "boilerplate-reactjs",
+  "name": "landmarks-timeline",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/react-fontawesome": "0.0.20",
-    "flow-bin": "^0.72.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
     "react-router-dom": "^4.2.2",
-    "react-router-ga": "^1.0.0",
+    "react-router-hash-link": "^1.2.0",
     "react-scripts": "1.1.4"
   },
   "devDependencies": {
@@ -17,14 +16,13 @@
     "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.2.3",
     "gulp-sass": "^3.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "flow": "flow"
+    "eject": "react-scripts eject"
   }
 }

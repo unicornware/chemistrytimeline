@@ -1,32 +1,49 @@
-@import url(..css/normalize.min.css);
+/**
+ * Display flex mixin where flex-wrap defaults to wrap.
+ * @parameter {string} $flexDirection - flex-direction
+ * @param {string} $alignItems - align-items
+ * @param {string} $justifyContent - justify-content
+*/
+/**
+ * Background image mixin
+ * @param {string} $url - image url
+ * @param {string} $pos - background-position
+ * @param {string} $size - background-size
+*/
+/**
+ * Mixin that bundles &:hover, &:active, and &:focus
+ */
+/**
+ * Mixin that sets the initial background color of an element,
+ * and the element's background color when it is hovered over.
+ * The hover color defaults to a shade 5% darker than the argument color.
+ * Uses the hocus mixin to set the hover color
+ * @param {string} $color - color to set
+*/
+/**
+ * Mixin for transitions.
+ * @param {string} $prop - transition-propery
+ * @param {string} $duration - transition-duration
+ * @param {string} $timing - transition-timing-function
+ * @param {string} $delay - transition-delay
+*/
 /* HELPER CLASSES -- HELPERS.SASS */
-/*
-  * Helper class that functions as a container.
-  *
-  * 1. Uses the max-width variable to set the maximum width. */
 .wrapper {
   height: 100%;
   width: 100%;
-  /* 1 */
-  max-width: 95%; }
+  max-width: 90%; }
 
-/*
-  * Helper class to truncate and add ellipsis to a string too long for it to
-  * fit on a single line.
-  * 1. Prevent content from wrapping, forcing it on a single line.
-  * 2. Add ellipsis at the end of the line. */
-.ellipsis {
-  /* 1 */
-  white-space: nowrap;
-  /* 2 */
-  text-overflow: ellipsis;
-  overflow: hidden; }
+.hexagon {
+  -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+          clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); }
 
 /* BEGIN BASE STYLES -- BASE-DIR.SASS */
 /* COMMON STYLES -- COMMON.SASS */
 * {
   -webkit-transition: all 0.25s ease-in-out 0s;
-  transition: all 0.25s ease-in-out 0s; }
+  transition: all 0.25s ease-in-out 0s;
+  font-family: "TheSansACS";
+  font-weight: 400; }
 
 *,
 html {
@@ -36,29 +53,86 @@ html {
 ::-webkit-scrollbar {
   display: none; }
 
-html, body {
-  font-family: "";
+html,
+body {
   color: #000;
   margin: 0; }
-
-h1, h2, h3, h4, h5, h6, ol, ul {
-  font-weight: 700; }
-
-p, a, li {
-  font-weight: 400; }
-
-a:hover, a:active, a:focus, button:hover, button:active, button:focus {
-  cursor: pointer; }
 
 a {
   text-decoration: none; }
   a:hover, a:active, a:focus {
-    font-weight: 600; }
-
-button {
-  border: none;
-  outline: none; }
+    cursor: pointer; }
 
 /* FONTS - FONTS.SASS */
+@font-face {
+  font-family: TheSansACS;
+  src: url(../../assets/fonts/TheSansACS-W7Bld.otf);
+  font-weight: 700; }
+
+@font-face {
+  font-family: TheSansACS;
+  src: url(../../assets/fonts/TheSansACS-W5Pla.otf);
+  font-weight: 400; }
+
+@font-face {
+  font-family: TheSansACS;
+  src: url(../../assets/fonts/TheSansACS-W3Lig.otf);
+  font-weight: 300; }
+
 /* BEGIN COMPONENT STYLES -- COMPONENTS-DIR.SASS */
+/* NAVIGATION STYLES - NAVIGATION.SASS */
+#navigation {
+  display: inline;
+  margin: 1em 0; }
+  #navigation .nav-link {
+    color: rgba(0, 0, 0, 0.375);
+    font-size: 2em;
+    font-weight: 300;
+    margin: 0 1em;
+    text-align: center; }
+
+#navigation .nav-link:hover, #navigation .nav-link:active, #navigation .nav-link:focus, #navigation .nav-link.active {
+  border-bottom: 4px solid #ffc72c;
+  color: #000;
+  font-weight: 700; }
+
 /* BEGIN VIEW SPECIFIC STYLES -- VIEWS-DIR.SASS */
+/* ROOT CONTAINER STYLES - ROOT.SASS */
+#root {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  #root #root-wrapper {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    #root #root-wrapper h1 {
+      font-size: 2.5em;
+      margin: 1.5em 0 0.375em; }
+    #root #root-wrapper p {
+      font-size: 1.25em;
+      margin: 0.375em 0 2em; }

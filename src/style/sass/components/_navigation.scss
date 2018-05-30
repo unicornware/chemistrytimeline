@@ -1,0 +1,31 @@
+/* NAVIGATION STYLES - NAVIGATION.SASS */
+
+#navigation {
+  display: inline;
+  margin: 1em 0;
+
+  .nav-link {
+    @include hocus {
+      @extend %active-link;
+    }
+
+
+    color: rgba($black, 0.375);
+    font: {
+      size: 2em;
+      weight: 300;
+    };
+    margin: 0 1em;
+    text-align: center;
+  }
+
+  .nav-link.active {
+    @extend %active-link;
+  }
+}
+
+%active-link {
+  border-bottom: 4px solid $gold;
+  color: $black;
+  font-weight: 700;
+}

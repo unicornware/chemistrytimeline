@@ -1,0 +1,15 @@
+/* TIMELINE STYLES - VIEWS/TIMELINE.SCSS */
+
+#timeline {
+  @include flex(row, center, center);
+
+  overflow: {
+    x: scroll;
+    y: hidden;
+  };
+  width: 100%;
+
+  .timeline-col {
+    @include flex(column, center, center);
+  }
+}

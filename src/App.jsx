@@ -8,6 +8,9 @@ import { BrowserRouter } from "react-router-dom";
 import Navigation from "./components/Navigation.jsx";
 import Modal from "./components/Modal.jsx";
 
+// views
+import Timeline from "./views/Timeline.jsx";
+
 //style
 import "./style/css/normalize.min.css";
 import "./style/css/app.min.css";
@@ -21,6 +24,7 @@ export default class App extends React.Component {
             <h1>Landmarks Timeline</h1>
             <p>Click the years to check out the history of chemistry</p>
             <Navigation />
+            <Timeline />
           </div>
         </React.Fragment>
       </BrowserRouter>

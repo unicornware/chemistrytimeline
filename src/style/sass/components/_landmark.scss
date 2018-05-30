@@ -1,0 +1,15 @@
+/* LANDMARK STYLES - COMPONENTS/LANDMARK.SCSS */
+
+.landmark {
+  @extend %hexagon;
+
+  @include flex(row, center, center);
+
+  height: 200px;
+  width: 240px;
+
+  // may need to fix this
+  .landmark-img {
+    width: 150%;
+  }
+}

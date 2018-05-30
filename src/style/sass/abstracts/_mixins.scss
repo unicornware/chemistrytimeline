@@ -8,7 +8,6 @@
 */
 @mixin flex($flexDirection, $alignItems, $justifyContent) {
   display: flex !important;
-  flex-wrap: wrap;
   flex-direction: $flexDirection;
   align-items: $alignItems;
   justify-content: $justifyContent;
@@ -24,11 +23,11 @@
 */
 @mixin set-bkg-img($url, $pos, $size) {
   background: {
-    image: url('#{$url}');
+    image: url("#{$url}");
     position: $pos;
     repeat: no-repeat;
     size: $size;
-  }
+  };
 
   @content;
 }

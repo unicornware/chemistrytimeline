@@ -1,8 +1,9 @@
 /* TIMELINE STYLES - VIEWS/TIMELINE.SCSS */
 
 #timeline {
-  @include flex(row, center, center);
+  @include flex(row, center, flex-start);
 
+  height: 700px;
   overflow: {
     x: scroll;
     y: hidden;
@@ -11,5 +12,17 @@
 
   .timeline-col {
     @include flex(column, center, center);
+
+    height: 100%;
   }
+
+  #col-2 {
+    @include flex(column-reverse, center, center);
+  }
+}
+
+// special classes
+
+.timeline-single {
+  //margin-bottom: 200px;
 }

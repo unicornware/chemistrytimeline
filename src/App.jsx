@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 
 // components
 import Navigation from "./components/Navigation.jsx";
-import Modal from "./components/Modal.jsx";
 
 // views
 import Timeline from "./views/Timeline.jsx";
@@ -21,8 +20,10 @@ export default class App extends React.Component {
       <BrowserRouter>
         <React.Fragment>
           <div className="wrapper" id="root-wrapper">
-            <h1>Landmarks Timeline</h1>
-            <p>Click the years to check out the history of chemistry</p>
+            <h1 className="root-heading">Landmarks Timeline</h1>
+            <p className="root-subheading">
+              Click the years to check out the history of chemistry
+            </p>
             <Navigation />
             <Timeline />
           </div>

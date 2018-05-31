@@ -1,15 +1,42 @@
 /* LANDMARK STYLES - COMPONENTS/LANDMARK.SCSS */
 
-.landmark {
-  @extend %hexagon;
-
-  @include flex(row, center, center);
-
-  height: 200px;
-  width: 240px;
-
-  // may need to fix this
-  .landmark-img {
-    width: 150%;
+.landmark-container {
+  .landmark-text {
+    h1, p {
+      margin: 0;
+      text-align: center;
+    }
   }
+
+  .landmark-line {
+    border-left: 3px solid rgba($black, 0.25);
+    height: 100px;
+  }
+
+  .landmark {
+    @extend %hexagon;
+
+    @include flex(row, center, center);
+
+    height: 200px;
+    width: 240px;
+
+    // may need to fix this
+    .landmark-img {
+      width: 150%;
+    }
+  }
+
+  .landmark:nth-of-type(even) {
+    margin-bottom: 200px;
+  }
+}
+
+// special classes
+.landmark-top {
+  @include flex(column, center, center);
+}
+
+.landmark-bttm {
+  @include flex(column-reverse, center, center);
 }

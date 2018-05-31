@@ -26,6 +26,22 @@ export default class LandmarkGenerator {
     this.landmarks.map((curr, i, landmarks) => {
       let key = "landmark-" + i;
 
+      let className = "";
+
+      if (i < 2) {
+        className = i === 0 ? "bttm" : "top";
+      } else if (i === 2) {
+        className = "top";
+      } else if (i === 3) {
+        className = "bttm";
+      } else if ((i + 1) % 3 === 0) {
+        className = "bttm";
+      } else if (i % 3 === 0) {
+        className = "top";
+      } else if ((i + 1) % 3 !== 0) {
+        className = i % 2 == 0 ? "top single" : "bttm single";
+      }
+
       let landmark = (
         <Landmark
           key={key}
@@ -37,10 +53,11 @@ export default class LandmarkGenerator {
           }
           next={landmarks[i + 1] ? landmarks[i + 1] : landmarks[0]}
           {...curr}
+          className={className}
         />
       );
 
-      landmarksArr.push(landmark);
+      return landmarksArr.push(landmark);
     });
 
     return landmarksArr;

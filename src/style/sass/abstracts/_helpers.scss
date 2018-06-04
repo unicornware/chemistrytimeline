@@ -1,15 +1,31 @@
 /* HELPER CLASSES -- HELPERS.SASS */
 
-// regular classes
+// abstract
+%hexagon {
+  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+}
 
+// regular classes
 .wrapper {
   height: 100%;
   width: 100%;
   max-width: $max-width;
 }
 
-// abstract classes
+.hexagon {
+  @extend %hexagon;
 
-%hexagon {
-  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+  @include flex(row, center, center);
+
+  @include hocus {
+    img {
+      width: 175%;
+    }
+  }
+
+
+  // may need to fix this
+  img {
+    width: 150%;
+  }
 }

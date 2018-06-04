@@ -4,13 +4,20 @@ import * as React from "react";
 // react router
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
+// jquery
+import $ from "jquery";
+
 // routes
 import ROUTES from "../config/routes.js";
 
 /**
- * Navigation component that features four routes - 1600, 1700, 1800, and 1900
+ * Navigation component that features
+ * four routes - 1600, 1700, 1800, and 1900
  */
 export default class Navigation extends React.Component {
+  componentDidMount() {
+    console.log($(".landmark").data("century"));
+  }
   render() {
     return (
       <nav id="navigation">

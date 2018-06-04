@@ -1,8 +1,11 @@
 // react
 import * as React from "react";
 
-// icons
-import FontAwesome from "@fortawesome/react-fontawesome";
+// jquery
+import $ from "jquery";
+
+let PLACEHOLDER_IMG =
+  "https://www.coopsandcages.com.au/blog/oe-content/uploads/2015/09/ferret_1.jpg";
 
 /**
  * Modal component.
@@ -11,45 +14,43 @@ import FontAwesome from "@fortawesome/react-fontawesome";
  * a title and description for the landmark, and a read more link.
  */
 export default class Modal extends React.Component {
-  state = { open: false };
+  constructor(props) {
+    super(props);
+    this.state = { data: this.props };
+  }
 
-  closeModal = e => {
-    // update state
-    this.setState({ open: !this.state.open });
-
-    // prevent default
-    e.preventDefault();
+  closeModal = () => {
+    $("#modal-root")
+      .removeClass("show")
+      .addClass("hide");
   };
 
   render() {
+    const { data } = this.state;
+
     return (
-      <div
-        className={"modal " + this.state.open ? "modal-open" : "modal-closed"}
-      >
-        <div className="modal-guts">
-          <div className="modal-header">
-            <button onClick={this.closeModal}>
-              <FontAwesome name="chevron-times" />
-            </button>
+      <div className="modal" id={"modal-" + data.id}>
+        <button onClick={this.closeModal} id="close">
+          <i className="fas fa-times" />
+        </button>
+        <div className="modal-body">
+          <button id="prev">
+            <i className="fas fa-chevron-left" />
+          </button>
+          <div className="modal-img-container hexagon">
+            <img src={PLACEHOLDER_IMG} alt="" />
           </div>
-          <div className="modal-body">
-            <FontAwesome name="chevron-left" />
-            <div className="modal-img-container">
-              <img src={this.props.img} alt="" className="hexagon" />
-            </div>
-            <div className="modal-body-text">
-              <p className="landmark-date">{this.props.date}</p>
-              <p className="landmark-title">{this.props.title}</p>
-              <p className="landmark-descrip">{this.props.description}</p>
-              <a href={this.props.link} className="landmark-readmore">
-                Read More{" "}
-                <span>
-                  <FontAwesome name="chevron-left" />
-                </span>
-              </a>
-            </div>
-            <FontAwesome name="chevron-right" />
+          <div className="modal-body-text">
+            <p className="landmark-year">{data.year}</p>
+            <h1 className="landmark-heading">{data.heading}</h1>
+            <p className="landmark-descrip">{data.description}</p>
+            <a href={data.url} className="landmark-readmore">
+              Read More <i className="fas fa-chevron-right" />
+            </a>
           </div>
+          <button id="next">
+            <i className="fas fa-chevron-right" />
+          </button>
         </div>
       </div>
     );

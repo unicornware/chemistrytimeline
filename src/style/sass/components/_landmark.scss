@@ -1,10 +1,21 @@
 /* LANDMARK STYLES - COMPONENTS/LANDMARK.SCSS */
 
+// general styles
 .landmark-container {
   .landmark-text {
-    h1, p {
+    height: 75px;
+
+    h1,
+    p {
       margin: 0;
       text-align: center;
+    }
+
+    p {
+      @include hocus {
+        cursor: pointer;
+        color: $blue;
+      }
     }
   }
 
@@ -14,29 +25,46 @@
   }
 
   .landmark {
-    @extend %hexagon;
+    @include hocus {
+      cursor: pointer;
+    }
 
-    @include flex(row, center, center);
 
     height: 200px;
-    width: 240px;
-
-    // may need to fix this
-    .landmark-img {
-      width: 150%;
-    }
-  }
-
-  .landmark:nth-of-type(even) {
-    margin-bottom: 200px;
+    width: 235px;
   }
 }
 
-// special classes
-.landmark-top {
+// special landmark-container classes
+.landmark-container-top {
   @include flex(column, center, center);
+
+  height: 50%;
+
+  &:not(.single) {
+    padding-bottom: 4px;
+  }
+
+  &.single {
+    margin-bottom: 175px;
+  }
 }
 
-.landmark-bttm {
+.landmark-container-bttm {
   @include flex(column-reverse, center, center);
+
+  height: 50%;
+
+  &:not(.single) {
+    padding-top: 2.5px;
+  }
+
+  &.single {
+    margin-top: 175px;
+  }
+}
+
+// landmark-0 container
+.landmark-container-bttm.special {
+  margin-bottom: 32.5px;
 }

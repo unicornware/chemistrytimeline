@@ -28,14 +28,33 @@
  * @param {string} $delay - transition-delay
 */
 /* HELPER CLASSES -- HELPERS.SASS */
+.hexagon {
+  -webkit-clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+          clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%); }
+
 .wrapper {
   height: 100%;
   width: 100%;
   max-width: 90%; }
 
-.landmark-container .landmark {
-  -webkit-clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-          clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%); }
+.hexagon {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .hexagon:hover img, .hexagon:active img, .hexagon:focus img {
+    width: 175%; }
+  .hexagon img {
+    width: 150%; }
 
 /* BEGIN BASE STYLES -- BASE-DIR.SASS */
 /* COMMON STYLES -- COMMON.SASS */
@@ -58,10 +77,16 @@ body {
   color: #000;
   margin: 0; }
 
+a:hover, a:active, a:focus, button:hover, button:active, button:focus {
+  cursor: pointer; }
+
 a {
   text-decoration: none; }
-  a:hover, a:active, a:focus {
-    cursor: pointer; }
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none; }
 
 /* FONTS - FONTS.SASS */
 @font-face {
@@ -80,10 +105,35 @@ a {
   font-weight: 300; }
 
 /* BEGIN COMPONENT STYLES -- COMPONENTS-DIR.SCSS */
+/* HEADER STYLES - HEADER.SCSS */
+header {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 100vw; }
+  header .heading {
+    font-size: 2.5em;
+    margin: 1.5em 0 0.375em; }
+  header .subheading {
+    font-size: 1.25em;
+    margin: 0.375em 0 2em; }
+
 /* NAVIGATION STYLES - COMPONENTS/NAVIGATION.SCSS */
 #navigation {
   display: inline;
-  margin: 1em 0; }
+  margin: 1em 0 3em; }
   #navigation .nav-link {
     color: rgba(0, 0, 0, 0.375);
     font-size: 2em;
@@ -97,37 +147,27 @@ a {
   font-weight: 700; }
 
 /* LANDMARK STYLES - COMPONENTS/LANDMARK.SCSS */
-.landmark-container .landmark-text h1, .landmark-container .landmark-text p {
-  margin: 0;
-  text-align: center; }
+.landmark-container .landmark-text {
+  height: 75px; }
+  .landmark-container .landmark-text h1,
+  .landmark-container .landmark-text p {
+    margin: 0;
+    text-align: center; }
+  .landmark-container .landmark-text p:hover, .landmark-container .landmark-text p:active, .landmark-container .landmark-text p:focus {
+    cursor: pointer;
+    color: #004fa7; }
 
 .landmark-container .landmark-line {
   border-left: 3px solid rgba(0, 0, 0, 0.25);
   height: 100px; }
 
 .landmark-container .landmark {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   height: 200px;
-  width: 240px; }
-  .landmark-container .landmark .landmark-img {
-    width: 150%; }
+  width: 235px; }
+  .landmark-container .landmark:hover, .landmark-container .landmark:active, .landmark-container .landmark:focus {
+    cursor: pointer; }
 
-.landmark-container .landmark:nth-of-type(even) {
-  margin-bottom: 200px; }
-
-.landmark-top {
+.landmark-container-top {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -140,9 +180,14 @@ a {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  height: 50%; }
+  .landmark-container-top:not(.single) {
+    padding-bottom: 4px; }
+  .landmark-container-top.single {
+    margin-bottom: 175px; }
 
-.landmark-bttm {
+.landmark-container-bttm {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -155,11 +200,86 @@ a {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  height: 50%; }
+  .landmark-container-bttm:not(.single) {
+    padding-top: 2.5px; }
+  .landmark-container-bttm.single {
+    margin-top: 175px; }
+
+.landmark-container-bttm.special {
+  margin-bottom: 32.5px; }
+
+/* MODAL STYLES - COMPONENTS/MODAL.SCSS */
+.modal {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  height: 45%;
+  padding: 0 2.5em;
+  max-width: 55%; }
+  .modal #close {
+    -ms-flex-item-align: end;
+        align-self: flex-end; }
+    .modal #close svg {
+      color: rgba(0, 0, 0, 0.375);
+      font-size: 2em; }
+  .modal .modal-body {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .modal .modal-body #prev, .modal .modal-body #next {
+      font-size: 3em; }
+    .modal .modal-body .modal-img-container {
+      height: 200px;
+      margin-left: 1em;
+      width: 245px; }
+    .modal .modal-body .modal-body-text {
+      height: 100%;
+      margin: 0 1em;
+      width: 75%; }
+      .modal .modal-body .modal-body-text .landmark-year {
+        font-size: 2em;
+        margin: 0 0 .25em; }
+      .modal .modal-body .modal-body-text .landmark-heading {
+        color: #004fa7;
+        font-size: 2.25em;
+        font-weight: 700;
+        margin: 0; }
+      .modal .modal-body .modal-body-text .landmark-descrip {
+        font-size: 1.375em;
+        font-weight: 300;
+        margin: .5em 0; }
+      .modal .modal-body .modal-body-text .landmark-readmore {
+        color: #000;
+        font-size: 1.25em;
+        font-weight: 300;
+        margin-top: 5em; }
 
 /* BEGIN VIEW SPECIFIC STYLES -- VIEWS-DIR.SCSS */
 /* ROOT CONTAINER STYLES - VIEWS/ROOT.SCSS */
-#root {
+#app-root {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -173,8 +293,8 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100vh; }
-  #root #root-wrapper {
+  overflow: hidden; }
+  #app-root #root-wrapper {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -182,18 +302,37 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-    #root #root-wrapper .root-heading {
-      font-size: 2.5em;
-      margin: 1.5em 0 0.375em; }
-    #root #root-wrapper .root-subheading {
-      font-size: 1.25em;
-      margin: 0.375em 0 2em; }
+
+#modal-root {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999; }
+  #modal-root.show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  #modal-root.hide {
+    display: none; }
 
 /* TIMELINE STYLES - VIEWS/TIMELINE.SCSS */
 #timeline {
@@ -210,10 +349,9 @@ a {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: 700px;
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 100%; }
+  width: 100vw; }
   #timeline .timeline-col {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -228,7 +366,10 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100%; }
+    height: 750px;
+    width: 275px; }
+  #timeline .timeline-col:nth-of-type(even) {
+    margin: 0 -52.5px 0; }
   #timeline #col-2 {
     display: -webkit-box !important;
     display: -ms-flexbox !important;

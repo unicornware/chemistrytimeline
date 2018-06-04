@@ -1,21 +1,32 @@
 /* ROOT CONTAINER STYLES - VIEWS/ROOT.SCSS */
 
-#root {
+#app-root {
   @include flex(column, center, space-between);
 
-  height: 100vh;
+  overflow: hidden;
 
   #root-wrapper {
-    @include flex(column, center, flex-start);
+    @include flex(column, flex-start, flex-start);
+  }
+}
 
-    .root-heading {
-      font-size: 2.5em;
-      margin: 1.5em 0 0.375em;
-    }
+#modal-root {
+  display: none;
+  align-items: center;
+  background-color: rgba($black, 0.5);
+  flex-direction: row;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 
-    .root-subheading {
-      font-size: 1.25em;
-      margin: 0.375em 0 2em;
-    }
+  &.show {
+    display: flex;
+  }
+
+  &.hide {
+    display: none;
   }
 }

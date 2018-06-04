@@ -1,25 +1,70 @@
 /* MODAL STYLES - COMPONENTS/MODAL.SCSS */
 
 .modal {
-  align-items: center;
-  height: 100%;
-  justify-content: center;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
+  @include flex(column, center, center);
 
-  .modal-guts {
-    @include flex(row, stretch, flex-start);
+  background-color: $white;
+  height: 45%;
+  padding: 0 2.5em;
+  max-width: 55%;
 
-    height: 50%;
-    width: 80%;
+  #close {
+    align-self: flex-end;
+
+    svg {
+      color: rgba($black, 0.375);
+      font-size: 2em;
+    }
   }
-}
 
-.modal-closed {
-  display: none;
-}
+  .modal-body {
+    @include flex(row, center, space-between);
 
-.modal-open {
-  display: flex;
+    #prev, #next {
+      font-size: 3em;
+    }
+
+    .modal-img-container {
+      height: 200px;
+      margin-left: 1em;
+      width: 245px;
+    }
+
+    .modal-body-text {
+      height: 100%;
+      margin: 0 1em;
+      width: 75%;
+
+      .landmark-year {
+        font-size: 2em;
+        margin: 0 0 .25em;
+      }
+
+      .landmark-heading {
+        color: $blue;
+        font: {
+          size: 2.25em;
+          weight: 700;
+        };
+        margin: 0;
+      }
+
+      .landmark-descrip {
+        font: {
+          size: 1.375em;
+          weight: 300;
+        };
+        margin: .5em 0;
+      }
+
+      .landmark-readmore {
+        color: $black;
+        font: {
+          size: 1.25em;
+          weight: 300;
+        };
+        margin-top: 5em;
+      }
+    }
+  }
 }

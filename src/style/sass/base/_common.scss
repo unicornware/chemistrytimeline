@@ -2,10 +2,11 @@
 
 * {
   @include transition(all, 0.25s, ease-in-out, 0s);
+
   font: {
     family: $font;
     weight: 400;
-  }
+  };
 }
 
 *,
@@ -23,9 +24,18 @@ body {
   margin: 0;
 }
 
-a {
+a, button {
   @include hocus {
     cursor: pointer;
   }
+}
+
+a {
   text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
 }

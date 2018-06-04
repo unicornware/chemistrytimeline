@@ -3,26 +3,26 @@
 #timeline {
   @include flex(row, center, flex-start);
 
-  height: 700px;
   overflow: {
     x: scroll;
     y: hidden;
   };
-  width: 100%;
+  width: 100vw;
 
+  // general column styles
   .timeline-col {
     @include flex(column, center, center);
 
-    height: 100%;
+    height: 750px;
+    width: 275px;
   }
 
+  .timeline-col:nth-of-type(even) {
+    margin: 0 -52.5px 0;
+  }
+
+  // special column styles
   #col-2 {
     @include flex(column-reverse, center, center);
   }
-}
-
-// special classes
-
-.timeline-single {
-  //margin-bottom: 200px;
 }

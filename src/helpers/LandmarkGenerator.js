@@ -29,7 +29,7 @@ export default class LandmarkGenerator {
       let className = "";
 
       if (i < 2) {
-        className = i === 0 ? "bttm" : "top";
+        className = i === 0 ? "bttm special" : "top single";
       } else if (i === 2) {
         className = "top";
       } else if (i === 3) {
@@ -39,13 +39,13 @@ export default class LandmarkGenerator {
       } else if (i % 3 === 0) {
         className = "top";
       } else if ((i + 1) % 3 !== 0) {
-        className = i % 2 == 0 ? "top single" : "bttm single";
+        className = i % 2 === 0 ? "top single" : "bttm single";
       }
 
       let landmark = (
         <Landmark
           key={key}
-          id={key}
+          id={i}
           prev={
             landmarks[i - 1]
               ? landmarks[i - 1]

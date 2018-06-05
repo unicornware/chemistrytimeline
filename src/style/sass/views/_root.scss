@@ -3,10 +3,8 @@
 #app-root {
   @include flex(column, center, space-between);
 
-  overflow: hidden;
-
   #root-wrapper {
-    @include flex(column, flex-start, flex-start);
+    @include flex(column, center, center);
   }
 }
 

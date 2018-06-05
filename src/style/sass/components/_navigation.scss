@@ -1,7 +1,6 @@
 /* NAVIGATION STYLES - COMPONENTS/NAVIGATION.SCSS */
 
 #navigation {
-  display: inline;
   margin: 1em 0 3em;
 
   .nav-link {
@@ -17,9 +16,14 @@
     };
     margin: 0 1em;
     text-align: center;
+
+    @media all and (max-width: 650px) {
+      font-size: 1.75em;
+      margin: 0 .5em;
+    }
   }
 
-  .nav-link.active {
+  &.active {
     @extend %active-link;
   }
 }

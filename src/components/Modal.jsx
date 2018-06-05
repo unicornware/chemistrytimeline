@@ -1,8 +1,11 @@
 // react
 import * as React from "react";
+import ReactDOM from "react-dom";
 
 // jquery
 import $ from "jquery";
+
+const MODAL_ROOT = document.getElementById("modal-root");
 
 let PLACEHOLDER_IMG =
   "https://www.coopsandcages.com.au/blog/oe-content/uploads/2015/09/ferret_1.jpg";
@@ -23,6 +26,7 @@ export default class Modal extends React.Component {
     $("#modal-root")
       .removeClass("show")
       .addClass("hide");
+    ReactDOM.unmountComponentAtNode(MODAL_ROOT);
   };
 
   render() {

@@ -2,7 +2,7 @@
 import * as React from "react";
 
 //react-router
-import { BrowserRouter } from "react-router-dom";
+import { MemoryRouter } from "react-router-dom";
 
 // components
 import Header from "./components/Header.jsx";
@@ -17,14 +17,12 @@ import "./style/css/app.min.css";
 export default class App extends React.Component {
   render() {
     return (
-      <BrowserRouter>
+      <MemoryRouter>
         <React.Fragment>
-          <div className="wrapper" id="root-wrapper">
-            <Header />
-            <Timeline />
-          </div>
+          <Header />
+          <Timeline />
         </React.Fragment>
-      </BrowserRouter>
+      </MemoryRouter>
     );
   }
 }

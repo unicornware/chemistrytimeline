@@ -8,7 +8,7 @@ import { NavHashLink as NavLink } from "react-router-hash-link";
 import $ from "jquery";
 
 // routes
-import ROUTES from "../config/routes.js";
+import * as routes from "../config/routes.js";
 
 /**
  * Navigation component that features
@@ -16,20 +16,39 @@ import ROUTES from "../config/routes.js";
  */
 export default class Navigation extends React.Component {
   componentDidMount() {
-    console.log($(".landmark").data("century"));
+    console.log($(".nav-link"));
   }
   render() {
     return (
       <nav id="navigation">
-        {/* iterates over the routes array and create four navigation links */}
-        {ROUTES.map((route, i) => {
-          let id = "nav-link" + route.link;
-          return (
-            <NavLink key={id} id={id} className="nav-link" to={route.link}>
-              {route.name}
-            </NavLink>
-          );
-        })}
+        <NavLink
+          className="nav-link"
+          id="nav-link-1600"
+          to={routes.SIXTEEN_HUNDRED}
+        >
+          1600
+        </NavLink>
+        <NavLink
+          className="nav-link"
+          id="nav-link-1700"
+          to={routes.SEVENTEEN_HUNDRED}
+        >
+          1700
+        </NavLink>
+        <NavLink
+          className="nav-link"
+          id="nav-link-1800"
+          to={routes.EIGHTEEN_HUNDRED}
+        >
+          1800
+        </NavLink>
+        <NavLink
+          className="nav-link"
+          id="nav-link-1900"
+          to={routes.NINETEEN_HUNDRED}
+        >
+          1900
+        </NavLink>
       </nav>
     );
   }

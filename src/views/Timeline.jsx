@@ -20,7 +20,7 @@ export default class Timeline extends React.Component {
     const { colMap } = this.state;
 
     let cols = [];
-    for (let i = 0; i < colMap.size; i++) {
+    for (let i = 0; i < 54; i++) {
       let colId = "col-" + i;
       let div = (
         <div key={colId} className="timeline-col" id={colId}>
@@ -57,6 +57,12 @@ export default class Timeline extends React.Component {
   }
 
   render() {
-    return <div id="timeline">{this.makeCols()} </div>;
+    return (
+      <div id="timeline">
+        <div className="wrapper" id="timeline-wrapper">
+          {this.makeCols()}
+        </div>
+      </div>
+    );
   }
 }

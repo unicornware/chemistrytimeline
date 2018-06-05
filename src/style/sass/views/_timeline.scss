@@ -1,28 +1,41 @@
 /* TIMELINE STYLES - VIEWS/TIMELINE.SCSS */
 
 #timeline {
-  @include flex(row, center, flex-start);
+  @include flex(row, center, center);
 
-  overflow: {
-    x: scroll;
-    y: hidden;
-  };
   width: 100vw;
 
-  // general column styles
-  .timeline-col {
-    @include flex(column, center, center);
+  #timeline-wrapper {
+    @include flex(row, center, flex-start);
 
-    height: 750px;
-    width: 275px;
-  }
+    @media all and (max-width: 650px) {
+      flex-direction: column;
+    }
 
-  .timeline-col:nth-of-type(even) {
-    margin: 0 -52.5px 0;
-  }
+    // general column styles
+    .timeline-col {
+      @include flex(column, center, center);
 
-  // special column styles
-  #col-2 {
-    @include flex(column-reverse, center, center);
+      height: 750px;
+      width: 275px;
+
+      @media all and (max-width: 650px) {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .timeline-col:nth-of-type(even) {
+      margin: 0 -52.5px 0;
+
+      @media all and (max-width: 650px) {
+        margin: 0;
+      }
+    }
+
+    // special column styles
+    #col-2 {
+      @include flex(column-reverse, center, center);
+    }
   }
 }

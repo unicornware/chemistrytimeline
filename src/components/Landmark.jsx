@@ -8,8 +8,6 @@ import $ from "jquery";
 // components
 import Modal from "./Modal.jsx";
 
-const MODAL_ROOT = document.getElementById("modal-root");
-
 let PLACEHOLDER_IMG =
   "https://www.coopsandcages.com.au/blog/oe-content/uploads/2015/09/ferret_1.jpg";
 
@@ -23,26 +21,41 @@ export default class Landmark extends React.Component {
     $("#modal-root")
       .removeClass("hide")
       .addClass("show");
-    ReactDOM.render(<Modal {...this.props} />, MODAL_ROOT);
+    ReactDOM.render(
+      <Modal {...this.props} />,
+      document.getElementById("modal-root")
+    );
   };
+
+  componentDidMount() {}
 
   render() {
     let containerStyle =
       "landmark-container landmark-container-" + this.props.className;
 
     return (
-      <div className={containerStyle}>
-        <div className="landmark-text">
-          <h1>{this.props.year}</h1>
-          <p role="button" onClick={this.openModal}>
+      <div className={containerStyle} id={this.props.century}>
+        <h1 className="landmark-year">{this.props.year}</h1>
+        {/* info */}
+        <div className="info">
+          <p
+            className="landmark-heading"
+            role="button"
+            onClick={this.openModal}
+          >
             {this.props.heading}
           </p>
+          <p className="landmark-description">{this.props.description}</p>
+          <a href={this.props.url} className="landmark-link">
+            Read More <i className="fas fa-chevron-right" />
+          </a>
         </div>
+        {/* line */}
         <div className="landmark-line" />
+        {/* actual landmark */}
         <div
           className="landmark hexagon"
           id={this.id}
-          data-century={this.props.century}
           role="button"
           onClick={this.openModal}
         >

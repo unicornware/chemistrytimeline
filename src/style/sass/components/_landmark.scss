@@ -2,20 +2,32 @@
 
 // general styles
 .landmark-container {
-  .landmark-text {
-    height: 75px;
+  height: 50%;
 
-    h1,
-    p {
-      margin: 0;
-      text-align: center;
-    }
+  @media all and (max-width: 650px) {
+    @include flex(row-reverse, center, center);
+  }
 
-    p {
+  h1,
+  p {
+    margin: 0;
+    text-align: center;
+  }
+
+  .info {
+    @include flex(column, flex-start, flex-start);
+
+    height: 37.5px;
+
+    .landmark-heading {
       @include hocus {
         cursor: pointer;
         color: $blue;
       }
+    }
+
+    .landmark-description, .landmark-link {
+      display: none;
     }
   }
 
@@ -37,34 +49,80 @@
 
 // special landmark-container classes
 .landmark-container-top {
+  @extend %responsive-container;
+
   @include flex(column, center, center);
-
-  height: 50%;
-
-  &:not(.single) {
-    padding-bottom: 4px;
-  }
 
   &.single {
     margin-bottom: 175px;
   }
+
+  &:not(.single) {
+    padding-bottom: 4px;
+  }
 }
 
 .landmark-container-bttm {
+  @extend %responsive-container;
+
   @include flex(column-reverse, center, center);
 
-  height: 50%;
+  .info {
+    order: -1;
+  }
 
-  &:not(.single) {
-    padding-top: 2.5px;
+  .landmark-line {
+    margin-bottom: 5px;
   }
 
   &.single {
     margin-top: 175px;
   }
+
+  &:not(.single) {
+    padding-top: 2.5px;
+  }
 }
 
 // landmark-0 container
 .landmark-container-bttm.special {
+  @extend %responsive-container;
+
   margin-bottom: 32.5px;
+}
+
+// abstract
+%responsive-container {
+  @media all and (max-width: 650px) {
+    @include flex(row-reverse, center, space-between);
+
+    height: auto;
+    margin: 0;
+    width: 100%;
+
+    .landmark-year {
+      order: 1;
+    }
+
+    .info {
+      width: 70%;
+
+      .landmark-description, .landmark-link {
+        display: block;
+        text-align: left;
+      }
+    }
+
+    .landmark-line {
+      transform: rotate(90deg);
+    }
+
+    &.single {
+      margin: 0;
+    }
+
+    &:not(.single) {
+      padding: 0;
+    }
+  }
 }

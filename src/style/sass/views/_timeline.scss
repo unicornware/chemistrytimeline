@@ -3,6 +3,10 @@
 #timeline {
   @include flex(row, center, center);
 
+  overflow: {
+    x: scroll;
+    y: hidden;
+  };
   width: 100vw;
 
   #timeline-wrapper {

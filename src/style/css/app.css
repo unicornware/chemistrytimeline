@@ -444,6 +444,8 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
   width: 100vw; }
   #timeline #timeline-wrapper {
     display: -webkit-box !important;

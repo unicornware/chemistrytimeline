@@ -8,6 +8,9 @@ import $ from "jquery";
 // components
 import Modal from "./Modal.jsx";
 
+// helpers
+import "../helpers/functions.js";
+
 let PLACEHOLDER_IMG =
   "https://www.coopsandcages.com.au/blog/oe-content/uploads/2015/09/ferret_1.jpg";
 
@@ -27,14 +30,12 @@ export default class Landmark extends React.Component {
     );
   };
 
-  componentDidMount() {}
-
   render() {
     let containerStyle =
       "landmark-container landmark-container-" + this.props.className;
 
     return (
-      <div className={containerStyle} id={this.props.century}>
+      <div className={containerStyle}>
         <h1 className="landmark-year">{this.props.year}</h1>
         {/* info */}
         <div className="info">
@@ -55,7 +56,7 @@ export default class Landmark extends React.Component {
         {/* actual landmark */}
         <div
           className="landmark hexagon"
-          id={this.id}
+          id={this.props.century}
           role="button"
           onClick={this.openModal}
         >

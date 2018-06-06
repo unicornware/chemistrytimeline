@@ -24,17 +24,7 @@
   }
 
 
-  // may need to fix this
   img {
     width: 150%;
-  }
-}
-
-.century {
-  color: rgba($black, 0.25);
-  display: none;
-
-  @media all and (max-width: 650px) {
-    display: block;
   }
 }

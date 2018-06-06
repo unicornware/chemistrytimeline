@@ -4,6 +4,10 @@ import * as React from "react";
 // components
 import Navigation from "./Navigation";
 
+/**
+ * Functional header component.
+ * Returns the heading, subheading, and navigation.
+ */
 const Header = () => {
   return (
     <header>

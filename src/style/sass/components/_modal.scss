@@ -35,12 +35,12 @@
       margin: 0 1em;
       width: 75%;
 
-      .landmark-year {
+      .modal-landmark-year {
         font-size: 2em;
         margin: 0 0 .25em;
       }
 
-      .landmark-heading {
+      .modal-landmark-heading {
         color: $blue;
         font: {
           size: 2.25em;
@@ -49,7 +49,7 @@
         margin: 0;
       }
 
-      .landmark-descrip {
+      .modal-landmark-descrip {
         font: {
           size: 1.375em;
           weight: 300;
@@ -57,7 +57,7 @@
         margin: .5em 0;
       }
 
-      .landmark-readmore {
+      .modal-landmark-link {
         color: $black;
         font: {
           size: 1.25em;

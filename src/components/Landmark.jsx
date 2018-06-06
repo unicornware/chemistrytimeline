@@ -35,38 +35,41 @@ export default class Landmark extends React.Component {
       "landmark-container landmark-container-" + this.props.className;
 
     return (
-      <div className={containerStyle}>
+      <div className={containerStyle} id={this.props.century}>
         <h1 className="landmark-year">{this.props.year}</h1>
-        {/* info */}
-        <div className="info">
-          <p
-            className="landmark-heading"
-            role="button"
-            onClick={this.openModal}
-          >
-            {this.props.heading}
-          </p>
-          <p className="landmark-description">{this.props.description}</p>
-          <a href={this.props.url} className="landmark-link">
-            Read More <i className="fas fa-chevron-right" />
-          </a>
-        </div>
-        {/* line */}
+        <LandmarkInfo {...this.props} openModal={this.openModal} />
+
         <div className="landmark-line" />
-        {/* actual landmark */}
-        <div
-          className="landmark hexagon"
-          id={this.props.century}
-          role="button"
-          onClick={this.openModal}
-        >
-          <img
-            className="landmark-img"
-            src={PLACEHOLDER_IMG}
-            alt={this.props.heading}
-          />
-        </div>
+
+        <LandmarkHexagon {...this.props} openModal={this.openModal} />
       </div>
     );
   }
 }
+
+const LandmarkInfo = props => {
+  return (
+    <div className="info">
+      <p className="landmark-heading" role="button" onClick={props.openModal}>
+        {props.heading}
+      </p>
+      <p className="landmark-description">{props.description}</p>
+      <a href={props.url} className="landmark-link">
+        Read More <i className="fas fa-chevron-right" />
+      </a>
+    </div>
+  );
+};
+
+const LandmarkHexagon = props => {
+  return (
+    <div
+      className="landmark hexagon"
+      id={"landmark-" + props.id}
+      role="button"
+      onClick={props.openModal}
+    >
+      <img className="landmark-img" src={PLACEHOLDER_IMG} alt={props.heading} />
+    </div>
+  );
+};

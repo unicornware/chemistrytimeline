@@ -11,7 +11,7 @@ const GENERATOR = new LandmarkGenerator(landmarks);
 
 /**
  * Timeline view.
- * The timeline contains several hexagon landmarks
+ * The timeline contains several hexagon shaped landmarks
  */
 export default class Timeline extends React.Component {
   state = { data: GENERATOR.getLandmarks(), colMap: new Map() };

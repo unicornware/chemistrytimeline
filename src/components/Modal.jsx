@@ -45,10 +45,10 @@ export default class Modal extends React.Component {
             <img src={PLACEHOLDER_IMG} alt="" />
           </div>
           <div className="modal-body-text">
-            <p className="landmark-year">{data.year}</p>
-            <h1 className="landmark-heading">{data.heading}</h1>
-            <p className="landmark-descrip">{data.description}</p>
-            <a href={data.url} className="landmark-readmore">
+            <p className="modal-landmark-year">{data.year}</p>
+            <h1 className="modal-landmark-heading">{data.heading}</h1>
+            <p className="modal-landmark-descrip">{data.description}</p>
+            <a href={data.url} className="modal-landmark-link">
               Read More <i className="fas fa-chevron-right" />
             </a>
           </div>

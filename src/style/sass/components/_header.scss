@@ -24,10 +24,6 @@ header {
     .subheading {
       font-size: 1.25em;
       margin: 0.375em 0 0;
-
-      @media all and (max-width: 650px) {
-        //font-size: 1em;
-      }
     }
   }
 }

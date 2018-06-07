@@ -5,6 +5,12 @@ header {
 
   width: 100vw;
 
+  @media all and (max-width: $first-break) {
+    background-color: $white;
+    position: fixed;
+    z-index: 5;
+  }
+
   #header-wrapper {
     @include flex(column, center, center);
 
@@ -16,7 +22,7 @@ header {
       font-size: 2.5em;
       margin: .5em 0 0.375em;
 
-      @media all and (max-width: 650px) {
+      @media all and (max-width: $first-break) {
         font-size: 2em;
       }
     }

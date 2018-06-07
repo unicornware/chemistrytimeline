@@ -9,10 +9,16 @@
   };
   width: 100vw;
 
+  @media all and (max-width: $first-break) {
+    margin-top: 200px;
+    overflow: hidden;
+    position: relative;
+  }
+
   #timeline-wrapper {
     @include flex(row, center, flex-start);
 
-    @media all and (max-width: 650px) {
+    @media all and (max-width: $first-break) {
       flex-direction: column;
     }
 
@@ -23,7 +29,7 @@
       height: 750px;
       width: 275px;
 
-      @media all and (max-width: 650px) {
+      @media all and (max-width: $first-break) {
         height: auto;
         width: 100%;
       }
@@ -32,7 +38,7 @@
     .timeline-col:nth-of-type(even) {
       margin: 0 -52.5px 0;
 
-      @media all and (max-width: 650px) {
+      @media all and (max-width: $first-break) {
         margin: 0;
       }
     }

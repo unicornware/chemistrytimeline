@@ -1,7 +1,7 @@
 /* NAVIGATION STYLES - COMPONENTS/NAVIGATION.SCSS */
 
 #navigation {
-  margin: 1em 0 3em;
+  margin: 1em 0;
 
   .nav-link {
     @include hocus {
@@ -17,7 +17,7 @@
     margin: 0 1em;
     text-align: center;
 
-    @media all and (max-width: 650px) {
+    @media all and (max-width: $first-break) {
       font-size: 1.75em;
       margin: 0 .5em;
     }

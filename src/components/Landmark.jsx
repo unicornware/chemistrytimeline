@@ -21,22 +21,41 @@ export default class Landmark extends React.Component {
   }
 
   openModal = () => {
-    $("#modal-root")
-      .removeClass("hide")
-      .addClass("show");
-    ReactDOM.render(
-      <Modal {...this.props} />,
-      document.getElementById("modal-root")
-    );
+    if ($(window).width() > 768) {
+      $("#modal-root")
+        .removeClass("hide")
+        .addClass("show");
+      ReactDOM.render(
+        <Modal {...this.props} />,
+        document.getElementById("modal-root")
+      );
+    }
   };
 
   render() {
     let containerStyle =
       "landmark-container landmark-container-" + this.props.className;
 
+    let century = this.props.century ? (
+      <h1 className="century">{this.props.century}</h1>
+    ) : null;
     return (
       <div className={containerStyle} id={this.props.century}>
-        <h1 className="landmark-year">{this.props.year}</h1>
+        <div
+          className="years"
+          style={
+            this.props.century &&
+            $(window).width() <= 768 &&
+            $(window).width() > 600
+              ? { alignSelf: "baseline" }
+              : !this.props.century && $(window).width() <= 600
+                ? { justifyContent: "flex-end" }
+                : {}
+          }
+        >
+          {century}
+          <h1 className="landmark-year">{this.props.year}</h1>
+        </div>
         <LandmarkInfo {...this.props} openModal={this.openModal} />
 
         <div className="landmark-line" />

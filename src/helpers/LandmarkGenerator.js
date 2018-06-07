@@ -45,7 +45,6 @@ export default class LandmarkGenerator {
       let landmark = (
         <Landmark
           key={key}
-          id={i}
           prev={
             landmarks[i - 1]
               ? landmarks[i - 1]

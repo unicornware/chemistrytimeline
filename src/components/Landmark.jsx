@@ -15,12 +15,7 @@ let PLACEHOLDER_IMG =
   "https://www.coopsandcages.com.au/blog/oe-content/uploads/2015/09/ferret_1.jpg";
 
 export default class Landmark extends React.Component {
-  constructor(props) {
-    super(props);
-    this.id = "landmark-" + this.props.id;
-  }
-
-  openModal = () => {
+  openModal = e => {
     if ($(window).width() > 768) {
       $("#modal-root")
         .removeClass("hide")

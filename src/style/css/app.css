@@ -443,22 +443,24 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background-color: #fff;
   height: 45%;
-  padding: 0 2.5em;
+  padding: 2.5em;
   max-width: 55%; }
   .modal #close {
     -ms-flex-item-align: end;
-        align-self: flex-end; }
+        align-self: flex-end;
+    margin-bottom: 3em;
+    padding: 0; }
     .modal #close svg {
       color: rgba(0, 0, 0, 0.375);
-      font-size: 2em; }
+      font-size: 1.5em; }
   .modal .modal-body {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -467,22 +469,27 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    height: auto; }
     .modal .modal-body #prev, .modal .modal-body #next {
-      font-size: 3em; }
+      -ms-flex-item-align: center;
+          align-self: center;
+      font-size: 2em;
+      padding: 0; }
     .modal .modal-body .modal-img-container {
+      -ms-flex-item-align: center;
+          align-self: center;
       height: 200px;
       margin-left: 1em;
-      width: 245px; }
+      width: 235px; }
     .modal .modal-body .modal-body-text {
-      height: 100%;
       margin: 0 1em;
-      width: 75%; }
+      width: 60%; }
       .modal .modal-body .modal-body-text .modal-landmark-year {
         font-size: 2em;
         margin: 0 0 .25em; }
@@ -492,14 +499,13 @@ header {
         font-weight: 700;
         margin: 0; }
       .modal .modal-body .modal-body-text .modal-landmark-descrip {
-        font-size: 1.375em;
+        font-size: 1.2em;
         font-weight: 300;
-        margin: .5em 0; }
+        margin: .5em 0 2em; }
       .modal .modal-body .modal-body-text .modal-landmark-link {
         color: #000;
         font-size: 1.25em;
-        font-weight: 300;
-        margin-top: 5em; }
+        font-weight: 600; }
 
 /* BEGIN VIEW SPECIFIC STYLES -- VIEWS-DIR.SCSS */
 /* ROOT CONTAINER STYLES - VIEWS/ROOT.SCSS */

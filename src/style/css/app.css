@@ -56,13 +56,6 @@
   .hexagon img {
     width: 150%; }
 
-.century {
-  color: rgba(0, 0, 0, 0.25);
-  display: none; }
-  @media all and (max-width: 650px) {
-    .century {
-      display: block; } }
-
 /* BEGIN BASE STYLES -- BASE-DIR.SASS */
 /* COMMON STYLES -- COMMON.SASS */
 * {
@@ -355,19 +348,19 @@ header {
       height: 100%;
       margin: 0 1em;
       width: 75%; }
-      .modal .modal-body .modal-body-text .landmark-year {
+      .modal .modal-body .modal-body-text .modal-landmark-year {
         font-size: 2em;
         margin: 0 0 .25em; }
-      .modal .modal-body .modal-body-text .landmark-heading {
+      .modal .modal-body .modal-body-text .modal-landmark-heading {
         color: #004fa7;
         font-size: 2.25em;
         font-weight: 700;
         margin: 0; }
-      .modal .modal-body .modal-body-text .landmark-descrip {
+      .modal .modal-body .modal-body-text .modal-landmark-descrip {
         font-size: 1.375em;
         font-weight: 300;
         margin: .5em 0; }
-      .modal .modal-body .modal-body-text .landmark-readmore {
+      .modal .modal-body .modal-body-text .modal-landmark-link {
         color: #000;
         font-size: 1.25em;
         font-weight: 300;

@@ -4,9 +4,6 @@ import * as React from "react";
 // react router
 import { NavHashLink as NavLink } from "react-router-hash-link";
 
-// jquery
-import $ from "jquery";
-
 // routes
 import routes from "../config/routes.js";
 
@@ -18,18 +15,6 @@ import "../helpers/functions.js";
  * four routes - 1600, 1700, 1800, and 1900
  */
 export default class Navigation extends React.Component {
-  onClick = e => {
-    let link = e.target.id;
-    let centuryDiv = "#" + link.substring(9, link.length);
-    link = "#" + link;
-
-    $("#timeline").animate(
-      { scrollLeft: $(centuryDiv).offset().left },
-      500,
-      "swing"
-    );
-  };
-
   render() {
     return (
       <nav id="navigation">
@@ -41,7 +26,7 @@ export default class Navigation extends React.Component {
               className="nav-link"
               id={id}
               to={route.route}
-              onClick={this.onClick}
+              smooth
             >
               {route.name}
             </NavLink>

@@ -2,7 +2,7 @@
 
 This project is a redesign of the older Chemical Landmark timeline, and is intended to improve the user experience of the older site, which can be found [here](https://www.acs.org/content/acs/en/education/whatischemistry/landmarks/landmarks-timeline.html).
 
-The [updated site](https://acs-chemistrytimeline.firebaseapp.com/) was built using [ReactJS](https://reactjs.org/).
+The [updated site](https://acs-chemistrytimeline.firebaseapp.com/) was built using [ReactJS](https://reactjs.org/), and is (temporarily) being hosted using [Google Firebase](https://firebase.google.com/docs/web/setup).
 
 # Install
 

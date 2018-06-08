@@ -5,11 +5,14 @@
 
   background-color: $white;
   height: 45%;
+  max-height: 50%;
+  max-width: 75%;
   padding: 1em 2.5em;
-  max-width: 55%;
+  width: 70%;
 
-  @media all and (max-width: $first-break) {
-    display: none;
+  @media all and (max-width: $modal-first-break) {
+    width: 80%;
+    max-width: 80%;
   }
 
   #close {

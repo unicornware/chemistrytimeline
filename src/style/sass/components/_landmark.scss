@@ -5,7 +5,20 @@
   height: 50%;
 
   @media all and (max-width: $first-break) {
-    @include flex(row-reverse, center, center);
+    @include flex(row-reverse, center, space-between);
+
+    flex-direction: row-reverse !important;
+    height: auto;
+    margin-bottom: 4em !important;
+    width: 100%;
+
+    &.single {
+      margin-bottom: 4em;
+    }
+
+    &:not(.single) {
+      padding: 0;
+    }
   }
 
   h1,
@@ -14,10 +27,31 @@
     text-align: center;
   }
 
+  @media all and (max-width: $second-break) {
+    @include flex(column-reverse, center, center);
+
+    flex-direction: column-reverse !important;
+    border-bottom: 2.5px solid rgba($gold, 0.375);
+    margin: 0 0 2em 0 !important;
+    width: 100%;
+  }
+
   .years {
     @include flex(column, center, center);
 
     height: 37.5px;
+
+    @media all and (max-width: $first-break) {
+      order: 1;
+      margin: 0 0.375em 0 0;
+    }
+
+    @media all and (max-width: $second-break) {
+      @include flex(row, center, space-between);
+
+      margin: 0;
+      width: 100%;
+    }
 
     .century,
     .landmark-year {
@@ -27,7 +61,21 @@
     .century {
       color: rgba($black, 0.375);
       display: none;
-      margin-bottom: 0.75em;
+      margin: 0 0 0.75em 0;
+
+      @media all and (max-width: $first-break) {
+        display: block;
+      }
+
+      @media all and (max-width: $second-break) {
+        margin: 0;
+      }
+    }
+
+    .landmark-year {
+      @media all and (max-width: $second-break) {
+        margin: 0;
+      }
     }
   }
 
@@ -36,22 +84,94 @@
 
     height: 37.5px;
 
+    @media all and (max-width: $first-break) {
+      margin-left: 55px;
+      width: 70%;
+    }
+
+    @media all and (max-width: $second-break) {
+      height: auto;
+      margin: 0 0 1.5em 0;
+      width: 100%;
+    }
+
     .landmark-heading {
       @include hocus {
         cursor: pointer;
         color: $blue;
+      }
+
+
+      @media all and (max-width: $first-break) {
+        color: $blue;
+        font-size: 1.375em;
+        text-align: left;
+      }
+
+      @media all and (max-width: $second-break) {
+        text-align: center;
+        width: 100%;
       }
     }
 
     .landmark-description,
     .landmark-link {
       display: none;
+
+      @media all and (max-width: $first-break) {
+        display: block;
+        text-align: left;
+      }
+
+      @media all and (max-width: $second-break) {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .landmark-description {
+      font-size: 1em;
+      line-height: 1.5em;
+      margin: 0.25em 0;
+
+      @media all and (max-width: $second-break) {
+        margin: 0;
+      }
+    }
+
+    .landmark-link {
+      color: $black;
+      font: {
+        size: 1.05em;
+        weight: 600;
+      };
+      margin: 0.25em 0 0 0;
+
+      @media all and (max-width: $second-break) {
+        margin-top: .625em;
+        text-align: center;
+      }
+
+      svg {
+        @media all and (max-width: $second-break) {
+          display: none;
+        }
+      }
     }
   }
 
   .landmark-line {
     border-left: 3px solid rgba($black, 0.25);
     height: 100px;
+
+    @media all and (max-width: $first-break) {
+      margin: 0;
+      transform: rotate(90deg);
+    }
+
+    @media all and (max-width: $second-break) {
+      display: none;
+    }
   }
 
   .landmark {
@@ -62,13 +182,22 @@
 
     height: 200px;
     width: 235px;
+
+    @media all and (max-width: $first-break) {
+      height: 160px;
+      width: 210px;
+    }
+
+    @media all and (max-width: $second-break) {
+      height: 200px;
+      margin: 1em 0 1.5em;
+      width: 235px;
+    }
   }
 }
 
 // special landmark-container classes
 .landmark-container-top {
-  @extend %responsive-container;
-
   @include flex(column, center, center);
 
   &.single {
@@ -81,8 +210,6 @@
 }
 
 .landmark-container-bttm {
-  @extend %responsive-container;
-
   @include flex(column-reverse, center, center);
 
   .info {
@@ -108,147 +235,5 @@
 
 // landmark-0 container
 .landmark-container-bttm.special {
-  @extend %responsive-container;
-
   margin-bottom: 32.5px;
-}
-
-// abstract
-%landmark-regular {
-  height: 200px;
-  width: 235px;
-}
-
-%landmark-small {
-  height: 160px;
-  width: 210px;
-}
-
-%responsive-container {
-  @media all and (max-width: $first-break) {
-    @include flex(row-reverse, center, space-between);
-
-    height: auto;
-    margin-bottom: 4em;
-    width: 100%;
-
-    .years {
-      order: 1;
-      margin: 0 0.375em 0 0;
-
-      .century {
-        display: block;
-      }
-    }
-
-    .info {
-      margin-left: 55px;
-      width: 70%;
-
-      .landmark-heading {
-        color: $blue;
-        font-size: 1.375em;
-        text-align: left;
-      }
-
-      .landmark-description,
-      .landmark-link {
-        display: block;
-        text-align: left;
-      }
-
-      .landmark-description {
-        font-size: 1em;
-        line-height: 1.5em;
-        margin: 0.25em 0;
-      }
-
-      .landmark-link {
-        color: $black;
-        font: {
-          size: 1.05em;
-          weight: 600;
-        };
-        margin: 0.25em 0 0 0;
-      }
-    }
-
-    .landmark-line {
-      margin: 0;
-      transform: rotate(90deg);
-    }
-
-    .landmark {
-      height: 160px;
-      width: 210px;
-    }
-
-    &.single {
-      margin-bottom: 4em;
-    }
-
-    &:not(.single) {
-      padding: 0;
-    }
-  }
-
-  @media all and (max-width: $second-break) {
-    @include flex(column-reverse, center, center);
-
-    border-bottom: 2.5px solid rgba($gold, 0.375);
-    margin: 0 0 2em 0;
-    width: 100%;
-
-    .years {
-      @include flex(row, center, space-between);
-
-      order: 1;
-      margin: 0;
-      width: 100%;
-
-      .century, .landmark-year {
-        margin: 0;
-      }
-    }
-
-    .info {
-      @include flex(column, center, center);
-
-      height: auto;
-      margin: 0 0 1.5em 0;
-      width: 100%;
-
-      .landmark-heading, .landmark-description, .landmark-link {
-        text-align: center;
-        width: 100%;
-      }
-
-      .landmark-heading {
-        text-align: center;
-        width: 100%;
-      }
-
-      .landmark-description {
-        margin: 0.25em 0;
-      }
-
-      .landmark-link {
-        width: auto;
-
-        svg {
-          display: none;
-        }
-      }
-    }
-
-    .landmark-line {
-      display: none;
-    }
-
-    .landmark {
-      height: 200px;
-      margin: 1em 0 1.5em;
-      width: 235px;
-    }
-  }
 }

@@ -37,7 +37,7 @@ export default class Modal extends React.Component {
 
   componentDidMount() {
     $(window).resize(() => {
-      if ($(window).width() <= 768) {
+      if ($(window).width() <= 800) {
         this.closeModal();
       }
     });

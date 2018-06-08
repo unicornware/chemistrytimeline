@@ -29,4 +29,8 @@
   &.hide {
     display: none;
   }
+
+  @media all and (max-width: $first-break) {
+    display: none;
+  }
 }

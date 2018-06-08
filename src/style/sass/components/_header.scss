@@ -3,6 +3,7 @@
 header {
   @include flex(row, center, center);
 
+  margin-bottom: 1.25em;
   width: 100vw;
 
   @media all and (max-width: $first-break) {

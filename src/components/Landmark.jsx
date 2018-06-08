@@ -13,7 +13,7 @@ import "../helpers/functions.js";
 
 export default class Landmark extends React.Component {
   openModal = e => {
-    if ($(window).width() > 768) {
+    if ($(window).width() > 800) {
       $("#modal-root")
         .removeClass("hide")
         .addClass("show");

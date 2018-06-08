@@ -3,10 +3,6 @@
 #timeline {
   @include flex(row, center, center);
 
-  overflow: {
-    x: scroll;
-    y: hidden;
-  };
   width: 100vw;
 
   @media all and (max-width: $first-break) {
@@ -15,8 +11,33 @@
     position: relative;
   }
 
+  #timeline-prev, #timeline-next {
+    font-size: 1.5em;
+    margin: 0 .5em;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    @media all and (max-width: $first-break) {
+      display: none;
+    }
+  }
+
+  #timeline-prev {
+    left: 1%;
+  }
+
+  #timeline-next {
+    right: 1%;
+  }
+
   #timeline-wrapper {
     @include flex(row, center, flex-start);
+
+    overflow: {
+      x: scroll;
+      y: hidden;
+    };
 
     @media all and (max-width: $first-break) {
       flex-direction: column;

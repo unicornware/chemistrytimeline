@@ -570,14 +570,25 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  overflow-x: scroll;
-  overflow-y: hidden;
   width: 100vw; }
   @media all and (max-width: 800px) {
     #timeline {
       margin-top: 200px;
       overflow: hidden;
       position: relative; } }
+  #timeline #timeline-prev, #timeline #timeline-next {
+    font-size: 1.5em;
+    margin: 0 .5em;
+    position: absolute;
+    top: 50%;
+    z-index: 2; }
+    @media all and (max-width: 800px) {
+      #timeline #timeline-prev, #timeline #timeline-next {
+        display: none; } }
+  #timeline #timeline-prev {
+    left: 1%; }
+  #timeline #timeline-next {
+    right: 1%; }
   #timeline #timeline-wrapper {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -591,7 +602,9 @@ header {
             align-items: center;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: flex-start; }
+            justify-content: flex-start;
+    overflow-x: scroll;
+    overflow-y: hidden; }
     @media all and (max-width: 800px) {
       #timeline #timeline-wrapper {
         -webkit-box-orient: vertical;

@@ -41,7 +41,7 @@ export default class Landmark extends React.Component {
             $(window).width() <= 768 &&
             $(window).width() > 600
               ? { alignSelf: "baseline" }
-              : !this.props.century && $(window).width() <= 600
+              : {} && !this.props.century && $(window).width() <= 600
                 ? { justifyContent: "flex-end" }
                 : {}
           }

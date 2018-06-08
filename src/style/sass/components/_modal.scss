@@ -1,16 +1,20 @@
 /* MODAL STYLES - COMPONENTS/MODAL.SCSS */
 
 .modal {
-  @include flex(column, stretch, flex-start);
+  @include flex(column, center, center);
 
   background-color: $white;
   height: 45%;
-  padding: 2.5em;
+  padding: 1em 2.5em;
   max-width: 55%;
+
+  @media all and (max-width: $first-break) {
+    display: none;
+  }
 
   #close {
     align-self: flex-end;
-    margin-bottom: 3em;
+    margin-top: -1em;
     padding: 0;
 
     svg {
@@ -20,18 +24,19 @@
   }
 
   .modal-body {
-    @include flex(row, flex-start, space-between);
+    @include flex(row, center, space-between);
 
     height: auto;
+    margin-top: 1em;
 
     #prev, #next {
-      align-self: center;
+      //align-self: center;
       font-size: 2em;
       padding: 0;
     }
 
     .modal-img-container {
-      align-self: center;
+      // align-self: center;
       height: 200px;
       margin-left: 1em;
       width: 235px;

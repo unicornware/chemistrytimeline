@@ -11,15 +11,13 @@ import Modal from "./Modal.jsx";
 // helpers
 import "../helpers/functions.js";
 
-let PLACEHOLDER_IMG =
-  "https://www.coopsandcages.com.au/blog/oe-content/uploads/2015/09/ferret_1.jpg";
-
 export default class Landmark extends React.Component {
   openModal = e => {
     if ($(window).width() > 768) {
       $("#modal-root")
         .removeClass("hide")
         .addClass("show");
+      $("body").css("overflow", "hidden");
       ReactDOM.render(
         <Modal {...this.props} />,
         document.getElementById("modal-root")
@@ -79,11 +77,11 @@ const LandmarkHexagon = props => {
   return (
     <div
       className="landmark hexagon"
-      id={"landmark-" + props.id}
+      id={props.key}
       role="button"
       onClick={props.openModal}
     >
-      <img className="landmark-img" src={PLACEHOLDER_IMG} alt={props.heading} />
+      <img className="landmark-img" src={props.image} alt={props.heading} />
     </div>
   );
 };

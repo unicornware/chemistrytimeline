@@ -1,13 +1,10 @@
 // react
 import * as React from "react";
 
-// data
-import landmarks from "../data/landmarks.json";
-
 // helpers
 import LandmarkGenerator from "../helpers/LandmarkGenerator.js";
 
-const GENERATOR = new LandmarkGenerator(landmarks);
+const GENERATOR = new LandmarkGenerator();
 
 /**
  * Timeline view.

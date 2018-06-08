@@ -4,15 +4,10 @@ import * as React from "react";
 // components
 import Landmark from "../components/Landmark.jsx";
 
-export default class LandmarkGenerator {
-  /**
-   * The LandmarkGenerator takes an array.
-   * @param {array} landmarks - array of landmarks w/ timeline information
-   */
-  constructor(landmarks) {
-    this.landmarks = landmarks;
-  }
+// data
+import landmarks from "../data/landmarks.json";
 
+export default class LandmarkGenerator {
   /**
    * This method returns an array of Landmark components
    * based on the value of this.landmarks
@@ -20,10 +15,10 @@ export default class LandmarkGenerator {
   getLandmarks = () => {
     let landmarksArr = [];
 
-    // map over this.landmarks
+    // map over landmarks
     // landmarks are expected to have a
     // year, century, url, image, heading, and description key/value pair
-    this.landmarks.map((curr, i, landmarks) => {
+    landmarks.map((curr, i, landmarks) => {
       let key = "landmark-" + i;
 
       let className = "";
@@ -42,19 +37,14 @@ export default class LandmarkGenerator {
         className = i % 2 === 0 ? "top single" : "bttm single";
       }
 
-      let landmark = (
-        <Landmark
-          key={key}
-          prev={
-            landmarks[i - 1]
-              ? landmarks[i - 1]
-              : landmarks[landmarks.length - 1]
-          }
-          next={landmarks[i + 1] ? landmarks[i + 1] : landmarks[0]}
-          {...curr}
-          className={className}
-        />
-      );
+      curr.key = key;
+      curr.prev = landmarks[i - 1]
+        ? landmarks[i - 1]
+        : landmarks[landmarks.length - 1];
+
+      curr.next = landmarks[i + 1] ? landmarks[i + 1] : landmarks[0];
+
+      let landmark = <Landmark {...curr} className={className} />;
 
       return landmarksArr.push(landmark);
     });

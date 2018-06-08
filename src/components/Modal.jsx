@@ -7,9 +7,6 @@ import $ from "jquery";
 
 const MODAL_ROOT = document.getElementById("modal-root");
 
-let PLACEHOLDER_IMG =
-  "https://www.coopsandcages.com.au/blog/oe-content/uploads/2015/09/ferret_1.jpg";
-
 /**
  * Modal component.
  * The modal features a close button, previous and next arrows
@@ -17,22 +14,38 @@ let PLACEHOLDER_IMG =
  * a title and description for the landmark, and a read more link.
  */
 export default class Modal extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { data: props };
+  }
+
   closeModal = () => {
     $("#modal-root")
       .removeClass("show")
       .addClass("hide");
+    $("body").css("overflow", "scroll");
     ReactDOM.unmountComponentAtNode(MODAL_ROOT);
   };
 
   previous = () => {
-    ReactDOM.render(<Modal {...this.props.prev} />, MODAL_ROOT);
+    this.setState({ data: this.state.data.prev });
   };
 
   next = () => {
     this.setState({ data: this.state.data.next });
   };
 
+  componentDidMount() {
+    $(window).resize(() => {
+      if ($(window).width() <= 768) {
+        this.closeModal();
+      }
+    });
+  }
+
   render() {
+    let { data } = this.state;
+
     return (
       <div className="modal">
         <button onClick={this.closeModal} id="close">
@@ -43,13 +56,13 @@ export default class Modal extends React.Component {
             <i className="fas fa-chevron-left" />
           </button>
           <div className="modal-img-container hexagon">
-            <img src={PLACEHOLDER_IMG} alt="" />
+            <img src={this.props.image} alt="" />
           </div>
           <div className="modal-body-text">
-            <p className="modal-landmark-year">{this.props.year}</p>
-            <h1 className="modal-landmark-heading">{this.props.heading}</h1>
-            <p className="modal-landmark-descrip">{this.props.description}</p>
-            <a href={this.props.url} className="modal-landmark-link">
+            <p className="modal-landmark-year">{data.year}</p>
+            <h1 className="modal-landmark-heading">{data.heading}</h1>
+            <p className="modal-landmark-descrip">{data.description}</p>
+            <a href={data.url} className="modal-landmark-link">
               Read More <i className="fas fa-chevron-right" />
             </a>
           </div>

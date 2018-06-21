@@ -1,5 +1,13 @@
 /* NAVIGATION STYLES - COMPONENTS/NAVIGATION.SCSS */
 
+// abstract classes
+%active-link {
+  border-bottom: 4px solid $gold;
+  color: $black;
+  font-weight: 700;
+}
+
+// regular styles
 #navigation {
   margin: 1em 0;
 
@@ -26,10 +34,4 @@
   &.active {
     @extend %active-link;
   }
-}
-
-%active-link {
-  border-bottom: 4px solid $gold;
-  color: $black;
-  font-weight: 700;
 }

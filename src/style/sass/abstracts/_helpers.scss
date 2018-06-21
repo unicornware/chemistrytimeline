@@ -1,6 +1,25 @@
-/* HELPER CLASSES -- HELPERS.SASS */
+/* HELPER CLASSES -- HELPERS.SCSS */
 
 // abstract
+%button {
+  @include hocus {
+    svg {
+      font-size: 1.5em;
+    }
+  }
+
+
+  border-radius: 50%;
+  height: 50px;
+  padding: 1em;
+  text-align: center;
+  width: 50px;
+
+  svg {
+    font-size: 1.25em;
+  }
+}
+
 %hexagon {
   clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
 }

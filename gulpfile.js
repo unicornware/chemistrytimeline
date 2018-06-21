@@ -2,6 +2,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const autoprefixer = require("gulp-autoprefixer");
+const cssbeautify = require("gulp-cssbeautify");
 const cssmin = require("gulp-cssmin");
 const rename = require("gulp-rename");
 
@@ -15,8 +16,14 @@ handleError = error => {
 gulp.task("sass", () =>
   gulp
     .src("./src/style/sass/app.scss")
-    .pipe(sass())
+    .pipe(sass({ outputStyle: "expanded" }))
     .pipe(autoprefixer())
+    .pipe(
+      cssbeautify({
+        indent: "  ",
+        autosemicolon: true
+      })
+    )
     .on("error", handleError)
     .pipe(gulp.dest("./src/style/css/"))
     .pipe(cssmin())

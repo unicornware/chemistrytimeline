@@ -8,76 +8,78 @@
   max-height: 50%;
   max-width: 75%;
   padding: 1em 2.5em;
+  position: relative;
   width: 70%;
 
   @media all and (max-width: $modal-first-break) {
     width: 80%;
     max-width: 80%;
   }
+}
 
-  #close {
-    align-self: flex-end;
-    margin-top: -1em;
-    padding: 0;
+#close {
+  @extend %button;
 
-    svg {
-      color: rgba($black, 0.375);
-      font-size: 1.5em;
-    }
+  background-color: $white;
+  box-shadow: 5px 5px 5px 2.5px rgba($black, 0.25);
+  position: absolute;
+  right: -25px;
+  top: -25px;
+
+  svg {
+    color: rgba($black, 0.375);
   }
+}
 
-  .modal-body {
-    @include flex(row, center, space-between);
+.modal-body {
+  @include flex(row, center, space-between);
 
-    height: auto;
-    margin-top: 1em;
+  height: auto;
+  margin-top: 1em;
+}
 
-    #prev, #next {
-      //align-self: center;
-      font-size: 2em;
-      padding: 0;
-    }
+#prev, #next {
+  font-size: 2em;
+  padding: 0;
+}
 
-    .modal-img-container {
-      // align-self: center;
-      height: 200px;
-      margin-left: 1em;
-      width: 235px;
-    }
+.modal-img-container {
+  height: 200px;
+  margin-left: 1em;
+  width: 235px;
+}
 
-    .modal-body-text {
-      margin: 0 1em;
-      width: 60%;
+.modal-body-text {
+  margin: 0 1em;
+  width: 60%;
+}
 
-      .modal-landmark-year {
-        font-size: 2em;
-        margin: 0 0 .25em;
-      }
+.modal-landmark-year {
+  font-size: 2em;
+  margin: 0 0 .25em;
+}
 
-      .modal-landmark-heading {
-        color: $blue;
-        font: {
-          size: 2.25em;
-          weight: 700;
-        };
-        margin: 0;
-      }
+.modal-landmark-heading {
+  color: $blue;
+  font: {
+    size: 2.25em;
+    weight: 700;
+  };
+  margin: 0;
+}
 
-      .modal-landmark-descrip {
-        font: {
-          size: 1.2em;
-          weight: 300;
-        };
-        margin: .5em 0 2em;
-      }
+.modal-landmark-descrip {
+  font: {
+    size: 1.2em;
+    weight: 300;
+  };
+  margin: .5em 0 2em;
+}
 
-      .modal-landmark-link {
-        color: $black;
-        font: {
-          size: 1.25em;
-          weight: 600;
-        };
-      }
-    }
-  }
+.modal-landmark-link {
+  color: $black;
+  font: {
+    size: 1.25em;
+    weight: 600;
+  };
 }

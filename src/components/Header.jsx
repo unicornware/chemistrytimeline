@@ -5,7 +5,7 @@ import * as React from "react";
 import Navigation from "./Navigation";
 
 /**
- * Functional header component.
+ * Functional Header component.
  * Returns the heading, subheading, and navigation.
  */
 const Header = () => {

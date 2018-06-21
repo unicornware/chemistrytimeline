@@ -24,7 +24,8 @@ body {
   margin: 0;
 }
 
-a, button {
+a,
+button {
   @include hocus {
     cursor: pointer;
   }

@@ -4,10 +4,10 @@
   @include flex(column, center, space-between);
 
   width: 100vw;
+}
 
-  #root-wrapper {
-    @include flex(column, center, center);
-  }
+#root-wrapper {
+  @include flex(column, center, center);
 }
 
 #modal-root {

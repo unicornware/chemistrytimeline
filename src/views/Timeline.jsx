@@ -16,33 +16,13 @@ const GENERATOR = new LandmarkGenerator();
 export default class Timeline extends React.Component {
   state = { data: GENERATOR.getLandmarks(), colMap: new Map() };
 
-  makeCols = () => {
-    const { colMap } = this.state;
-
-    let cols = [];
-    for (let i = 0; i < 54; i++) {
-      let colId = "col-" + i;
-      let div = (
-        <div key={colId} className="timeline-col" id={colId}>
-          {colMap.get(i)}
-        </div>
-      );
-      cols.push(div);
-    }
-
-    return cols;
-  };
-
-  previous = () => {
-    let scroll = $("#timeline-wrapper").scrollLeft() - $("#col-0").width() * 2;
-    $("#timeline-wrapper").animate({ scrollLeft: scroll }, 500, "swing");
-  };
-
-  next = () => {
-    let scroll = $("#timeline-wrapper").scrollLeft() + $("#col-0").width() * 2;
-    $("#timeline-wrapper").animate({ scrollLeft: scroll }, 500, "swing");
-  };
-
+  /**
+   * Once the component is mounted,
+   * this.state.colMap is populated with by the Landmark components found
+   * in this.state.data. The keys of colMap correspond to the columns the
+   * Landmarks will be placed in.
+   * @return {void}@memberof Timeline
+   */
   componentDidMount() {
     const { data } = this.state;
     let map = new Map();
@@ -66,18 +46,63 @@ export default class Timeline extends React.Component {
     this.setState({ colMap: map });
   }
 
+  /**
+   * Based on this.state.colMap, this method generates
+   * the timeline columns and places the landmarks inside of them.
+   * @memberof Timeline
+   */
+  makeCols = () => {
+    const { colMap } = this.state;
+
+    let cols = [];
+    for (let i = 0; i < 54; i++) {
+      let colId = "col-" + i;
+      let div = (
+        <div key={colId} className="timeline-col" id={colId}>
+          {colMap.get(i)}
+        </div>
+      );
+      cols.push(div);
+    }
+
+    return cols;
+  };
+
+  /**
+   * Scrolls the timeline backwards.
+   * @memberof Timeline
+   */
+  previous = () => {
+    let scroll = $("#timeline").scrollLeft() - $("#col-0").width() * 2;
+    $("#timeline").animate({ scrollLeft: scroll }, 500, "swing");
+  };
+
+  /**
+   * Scrolls the timeline forward.
+   * @memberof Timeline
+   */
+  next = () => {
+    let scroll = $("#timeline").scrollLeft() + $("#col-0").width() * 2;
+    $("#timeline").animate({ scrollLeft: scroll }, 500, "swing");
+  };
+
+  /**
+   * Populated by makeCols(), this method generates
+   * div#timeline and its children.
+   *
+   * @return div#timeline and its children
+   * @memberof Timeline
+   */
   render() {
     return (
       <div id="timeline">
-        <div className="wrapper" id="timeline-wrapper">
-          <button id="timeline-prev" onClick={this.previous}>
-            <i className="fas fa-chevron-left" />
-          </button>
-          {this.makeCols()}
-          <button id="timeline-next" onClick={this.next}>
-            <i className="fas fa-chevron-right" />
-          </button>
-        </div>
+        <button id="timeline-prev" onClick={this.previous}>
+          <i className="fas fa-chevron-left" />
+        </button>
+        {this.makeCols()}
+        <button id="timeline-next" onClick={this.next}>
+          <i className="fas fa-chevron-right" />
+        </button>
       </div>
     );
   }

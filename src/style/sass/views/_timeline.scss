@@ -1,72 +1,70 @@
 /* TIMELINE STYLES - VIEWS/TIMELINE.SCSS */
 
 #timeline {
-  @include flex(row, center, center);
+  @include flex(row, center, flex-start);
 
+  padding: 0 1em;
+  overflow: {
+    x: scroll;
+    y: hidden;
+  };
   width: 100vw;
 
   @media all and (max-width: $first-break) {
+    flex-direction: column;
     margin-top: 200px;
     overflow: hidden;
     position: relative;
   }
+}
 
-  #timeline-prev, #timeline-next {
-    font-size: 1.5em;
-    margin: 0 .5em;
-    position: absolute;
-    top: 50%;
-    z-index: 2;
+// general column styles
+.timeline-col {
+  @include flex(column, center, center);
 
-    @media all and (max-width: $first-break) {
-      display: none;
-    }
+  height: 750px;
+  width: 275px;
+
+  @media all and (max-width: $first-break) {
+    height: auto;
+    width: 100%;
   }
+}
 
-  #timeline-prev {
-    left: 1%;
+.timeline-col:nth-of-type(even) {
+  margin: 0 -52.5px 0;
+
+  @media all and (max-width: $first-break) {
+    margin: 0;
   }
+}
 
-  #timeline-next {
-    right: 1%;
+// special column style
+#col-2 {
+  @include flex(column-reverse, center, center);
+}
+
+// buttons
+#timeline-prev, #timeline-next {
+  @extend %button;
+
+  background-color: $blue;
+  color: $white;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  @media all and (max-width: $first-break) {
+    display: none;
   }
+}
 
-  #timeline-wrapper {
-    @include flex(row, center, flex-start);
+#timeline-prev {
+  box-shadow: -2.5px 2.5px 5px 2.5px rgba($black, 0.25);
+  left: 1.25%;
+}
 
-    overflow: {
-      x: scroll;
-      y: hidden;
-    };
-
-    @media all and (max-width: $first-break) {
-      flex-direction: column;
-    }
-
-    // general column styles
-    .timeline-col {
-      @include flex(column, center, center);
-
-      height: 750px;
-      width: 275px;
-
-      @media all and (max-width: $first-break) {
-        height: auto;
-        width: 100%;
-      }
-    }
-
-    .timeline-col:nth-of-type(even) {
-      margin: 0 -52.5px 0;
-
-      @media all and (max-width: $first-break) {
-        margin: 0;
-      }
-    }
-
-    // special column styles
-    #col-2 {
-      @include flex(column-reverse, center, center);
-    }
-  }
+#timeline-next {
+  box-shadow: 2.5px 2.5px 5px 2.5px rgba($black, 0.25);
+  right: 1.25%;
 }

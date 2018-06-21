@@ -3,10 +3,10 @@
 * {
   @include transition(all, 0.25s, ease-in-out, 0s);
 
-  font: {
-    family: $font;
-    weight: 400;
-  };
+  // font: {
+  //   family: $font;
+  //   weight: 400;
+  // };
 }
 
 *,
@@ -32,6 +32,11 @@ button {
 }
 
 a {
+  @include hocus {
+    text-decoration: none !important;
+  }
+
+
   text-decoration: none;
 }
 

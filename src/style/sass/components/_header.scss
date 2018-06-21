@@ -4,7 +4,7 @@ header {
   @include flex(row, center, center);
 
   margin-bottom: 1.25em;
-  width: 100vw;
+  width: 100%;
 
   @media all and (max-width: $first-break) {
     background-color: $white;

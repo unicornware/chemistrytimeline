@@ -4,6 +4,9 @@ import * as React from "react";
 //react-router
 import { MemoryRouter } from "react-router-dom";
 
+// utils
+import { previous, next } from "./helpers/utils.js";
+
 // components
 import Header from "./components/Header.jsx";
 
@@ -20,7 +23,21 @@ export default class App extends React.Component {
       <MemoryRouter>
         <React.Fragment>
           <Header />
-          <Timeline />
+
+          <div className="timeline-container">
+            <div className="btn-container">
+              <button className="btn-scroll-timeline" onClick={previous}>
+                <i className="fas fa-chevron-left" />
+              </button>
+            </div>
+            <Timeline />
+
+            <div className="btn-container">
+              <button className="btn-scroll-timeline" onClick={next}>
+                <i className="fas fa-chevron-right" />
+              </button>
+            </div>
+          </div>
         </React.Fragment>
       </MemoryRouter>
     );

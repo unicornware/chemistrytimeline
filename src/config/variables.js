@@ -1,7 +1,7 @@
 // global variables
 
 // breakpoints
-const FIRST_BREAK = 800;
+const FIRST_BREAK = 768;
 const SECOND_BREAK = 650;
 
 // elements

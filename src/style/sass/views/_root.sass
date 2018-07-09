@@ -1,0 +1,65 @@
+/* ROOT CONTAINER STYLES - VIEWS/ROOT.SCSS
+
+#app-root
+  margin: 0 auto
+  width: 1170px
+
+  @media all and (max-width: breakpoint("acs-med"))
+    width: 970px
+
+  @media all and (max-width: breakpoint("acs-small"))
+    width: 750px
+
+  @media all and (max-width: breakpoint("x-small"))
+    width: 100%
+
+.timeline-container
+  +flex(row, center, center)
+
+// buttons
+.btn-container
+  position: absolute
+  z-index: 5
+
+  &:first-of-type()
+    left: 65px
+
+  &:last-of-type()
+    right: 65px
+
+.btn-scroll-timeline
+  @extend %button
+
+  background-color: $blue
+  color: $white
+
+  &:first-of-type()
+    box-shadow: (-2.5px) 2.5px 5px 2.5px rgba($black, 0.25)
+
+  &:last-of-type()
+    box-shadow: 2.5px 2.5px 5px 2.5px rgba($black, 0.25)
+
+  @media all and (max-width: $first-break)
+    display: none
+
+#modal-root
+  display: none
+  align-items: center
+  background-color: rgba($black, 0.5)
+  flex-direction: row
+  height: 100vh
+  justify-content: center
+  left: 0
+  position: fixed
+  top: 0
+  width: 100vw
+  z-index: 999
+
+  &.show
+    display: flex !important
+
+  &.hide
+    display: none
+
+  @media all and (max-width: breakpoint("acs-small"))
+    display: none

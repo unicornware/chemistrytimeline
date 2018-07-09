@@ -1,0 +1,35 @@
+/* TIMELINE STYLES - VIEWS/TIMELINE.SCSS
+
+#timeline
+  +flex(row, center, flex-start)
+
+  overflow: scroll
+  position: relative
+  width: 100%
+
+  @media all and (max-width: breakpoint("acs-small"))
+    flex-direction: column
+    margin-top: 200px
+    overflow: hidden
+    padding: 1em 1.5em 0
+
+// general column styles
+.timeline-col
+  +flex(column, center, center)
+
+  // height: 100%
+  width: 275px
+
+  @media all and (max-width: $first-break)
+    height: auto
+    width: 100%
+
+.timeline-col:nth-of-type(even)
+  margin: 0 -52.5px 0
+
+  @media all and (max-width: $first-break)
+    margin: 0
+
+// special column style
+#col-2
+  +flex(column-reverse, center, center)

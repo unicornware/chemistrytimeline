@@ -15,7 +15,7 @@ handleError = error => {
 // compile sass
 gulp.task("sass", () =>
   gulp
-    .src("./src/style/sass/app.scss")
+    .src("./src/style/sass/app.sass")
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(autoprefixer())
     .pipe(

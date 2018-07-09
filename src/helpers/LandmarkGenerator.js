@@ -33,6 +33,7 @@ export default class LandmarkGenerator {
       let key = "landmark-" + i;
 
       curr.key = key;
+      curr.id = curr.key;
 
       this.link(curr, i, landmarkData);
 

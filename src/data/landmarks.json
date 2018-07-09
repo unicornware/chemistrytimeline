@@ -3,7 +3,7 @@
     "year": "1607",
     "century": "1600",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/jamestownchemistry.html",
+      "/content/acs/en/education/whatischemistry/landmarks/jamestownchemistry.html",
     "image": "assets/img/1607-jamestown.jpg",
     "heading": "Chemistry at Jamestown",
     "description":
@@ -12,8 +12,7 @@
   {
     "year": "1772",
     "century": "1700",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/lavoisier.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/lavoisier.html",
     "image": "assets/img/1772-lavoisier.jpg",
     "heading": "The Chemical Revolution",
     "description":
@@ -22,7 +21,7 @@
   {
     "year": "1774",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/josephpriestleyoxygen.html",
+      "/content/acs/en/education/whatischemistry/landmarks/josephpriestleyoxygen.html",
     "image": "assets/img/1774-priestley-experiment.jpg",
     "heading": "Discovery of Oxygen",
     "description":
@@ -32,7 +31,7 @@
     "year": "1846",
     "century": "1800",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/norbertrillieux.html",
+      "/content/acs/en/education/whatischemistry/landmarks/norbertrillieux.html",
     "image": "assets/img/1846-norbert-rillieux.jpg",
     "heading": "Multiple Effect Evaporator",
     "description":
@@ -41,7 +40,7 @@
   {
     "year": "1854",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/pennsylvaniaoilindustry.html",
+      "/content/acs/en/education/whatischemistry/landmarks/pennsylvaniaoilindustry.html",
     "image": "assets/img/1854-kier-still.jpg",
     "heading": "First Commercial Oil Refinery",
     "description":
@@ -50,7 +49,7 @@
   {
     "year": "1859",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/pennsylvaniaoilindustry.html",
+      "/content/acs/en/education/whatischemistry/landmarks/pennsylvaniaoilindustry.html",
     "image": "assets/img/1859-drake-well.jpg",
     "heading": "First Commercial Oil Well",
     "description":
@@ -59,7 +58,7 @@
   {
     "year": "1869",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/bakingpowder.html",
+      "/content/acs/en/education/whatischemistry/landmarks/bakingpowder.html",
     "image": "assets/img/1869-baking-powder.jpg",
     "heading": "Development of Baking Powder",
     "description":
@@ -67,8 +66,7 @@
   },
   {
     "year": "1876",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/draperacs.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/draperacs.html",
     "image": "assets/img/1876-john-draper.jpg",
     "heading": "John W. Draper",
     "description":
@@ -77,7 +75,7 @@
   {
     "year": "1876",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/thomas-edison.html",
+      "/content/acs/en/education/whatischemistry/landmarks/thomas-edison.html",
     "image": "assets/img/edison.jpg",
     "heading": "Thomas Edison's Menlo Park Lab",
     "description":
@@ -86,7 +84,7 @@
   {
     "year": "1885",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/chandlerlaboratory.html",
+      "/content/acs/en/education/whatischemistry/landmarks/chandlerlaboratory.html",
     "image": "assets/img/1885-chandler-lab-lehigh-univ.jpg",
     "heading": "Chandler Lab at Lehigh University",
     "description":
@@ -95,7 +93,7 @@
   {
     "year": "1886",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/aluminumprocess.html",
+      "/content/acs/en/education/whatischemistry/landmarks/aluminumprocess.html",
     "image": "assets/img/1886-cmhall.jpg",
     "heading": "Production of Aluminum",
     "description":
@@ -104,7 +102,7 @@
   {
     "year": "1887",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/thomas-edison.html",
+      "/content/acs/en/education/whatischemistry/landmarks/thomas-edison.html",
     "image": "assets/img/edison.jpg",
     "heading": "Thomas Edison's West Orange Lab",
     "description":
@@ -113,7 +111,7 @@
   {
     "year": "1887",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/rachel-holloway-lloyd.html",
+      "/content/acs/en/education/whatischemistry/landmarks/rachel-holloway-lloyd.html",
     "image": "assets/img/1887-rachel-lloyd.jpg",
     "heading": "Rachel Lloyd, Pioneer Chemist",
     "description":
@@ -122,7 +120,7 @@
   {
     "year": "1888",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/aluminumprocess.html",
+      "/content/acs/en/education/whatischemistry/landmarks/aluminumprocess.html",
     "image": "assets/img/1888-cmhall-aluminum-production.jpg",
     "heading": "Production of Aluminum",
     "description":
@@ -131,7 +129,7 @@
   {
     "year": "1891",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/bromineproduction.html",
+      "/content/acs/en/education/whatischemistry/landmarks/bromineproduction.html",
     "image": "assets/img/1891-dow-evans-mill.jpg",
     "heading": "Production of Bromine",
     "description":
@@ -140,7 +138,7 @@
   {
     "year": "1892",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/calciumcarbideacetylene.html",
+      "/content/acs/en/education/whatischemistry/landmarks/calciumcarbideacetylene.html",
     "image": "assets/img/1892-tlwillson.jpg",
     "heading": "Production of Calcium Carbide and Acetylene",
     "description":
@@ -149,7 +147,7 @@
   {
     "year": "1895",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/atomicweightofoxygen.html",
+      "/content/acs/en/education/whatischemistry/landmarks/atomicweightofoxygen.html",
     "image": "assets/img/1895-morley-lab-cwru.jpg",
     "heading": "Atomic Weight of Oxygen",
     "description":
@@ -157,8 +155,7 @@
   },
   {
     "year": "1896",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/carver.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/carver.html",
     "image": "assets/img/1896-gw-carver.jpg",
     "heading": "George Washington Carver",
     "description":
@@ -167,7 +164,7 @@
   {
     "year": "1896",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/drycellbattery.html",
+      "/content/acs/en/education/whatischemistry/landmarks/drycellbattery.html",
     "image": "assets/img/1896-columbia-battery.jpg",
     "heading": "Columbia Dry Cell Battery",
     "description":
@@ -176,7 +173,7 @@
   {
     "year": "1897",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/alicehamilton.html",
+      "/content/acs/en/education/whatischemistry/landmarks/alicehamilton.html",
     "image": "assets/img/1897-alice-hamilton.jpg",
     "heading": "Development of Occupational Medicine",
     "description":
@@ -185,7 +182,7 @@
   {
     "year": "1898",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/havemeyerhall.html",
+      "/content/acs/en/education/whatischemistry/landmarks/havemeyerhall.html",
     "image": "assets/img/1898-havemeyer-hall-chandler-univ.jpg",
     "heading": "Havemeyer Hall",
     "description":
@@ -195,7 +192,7 @@
     "year": "1900",
     "century": "1900",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/freeradicals.html",
+      "/content/acs/en/education/whatischemistry/landmarks/freeradicals.html",
     "image": "assets/img/1900-moses-gomberg-free-radicals.jpg",
     "heading": "Organic Free Radicals",
     "description":
@@ -204,7 +201,7 @@
   {
     "year": "1901",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/rockefelleruniversity.html",
+      "/content/acs/en/education/whatischemistry/landmarks/rockefelleruniversity.html",
     "image": "assets/img/1901-rockefeller-univ.jpg",
     "heading": "Biomedical Research at Rockefeller Univ.",
     "description":
@@ -212,8 +209,7 @@
   },
   {
     "year": "1901",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/nist.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/nist.html",
     "image": "assets/img/1901-nist.jpg",
     "heading": "NIST",
     "description":
@@ -222,7 +218,7 @@
   {
     "year": "1902",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/noyeslaboratory.html",
+      "/content/acs/en/education/whatischemistry/landmarks/noyeslaboratory.html",
     "image": "assets/img/1902-noyes-lab-univ-illinois.jpg",
     "heading": "Noyes Laboratory",
     "description":
@@ -231,7 +227,7 @@
   {
     "year": "1905",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/heliumnaturalgas.html",
+      "/content/acs/en/education/whatischemistry/landmarks/heliumnaturalgas.html",
     "image": "assets/img/1905-helium-natural-gas.jpg",
     "heading": "Helium in Natural Gas",
     "description":
@@ -240,7 +236,7 @@
   {
     "year": "1906",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/earthelements.html",
+      "/content/acs/en/education/whatischemistry/landmarks/earthelements.html",
     "image": "assets/img/1906-charles-james-rare-earths.jpg",
     "heading": "Separation of Rare Earth Elements",
     "description":
@@ -248,8 +244,7 @@
   },
   {
     "year": "1907",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/bakelite.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/bakelite.html",
     "image": "assets/img/1907-bakelite-buttons.jpg",
     "heading": "Bakelite: The World’s First Synthetic Plastic",
     "description":
@@ -257,8 +252,7 @@
   },
   {
     "year": "1907",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/cas.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/cas.html",
     "image": "assets/img/1907-cas.jpg",
     "heading": "Chemical Abstracts Service",
     "description":
@@ -267,7 +261,7 @@
   {
     "year": "1913",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/mellon-institute.html",
+      "/content/acs/en/education/whatischemistry/landmarks/mellon-institute.html",
     "image": "assets/img/1913-mellon-institute.jpg",
     "heading": "Mellon Institute",
     "description":
@@ -275,8 +269,7 @@
   },
   {
     "year": "1918",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/gilman.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/gilman.html",
     "image": "assets/img/1918-gilman-hallucberkeley.jpg",
     "heading": "Gilman Hall",
     "description":
@@ -285,7 +278,7 @@
   {
     "year": "1921",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/uoplaboratory.html",
+      "/content/acs/en/education/whatischemistry/landmarks/uoplaboratory.html",
     "image": "assets/img/1921-uop-riverside-lab.jpg",
     "heading": "UOP Riverside Laboratory",
     "description":
@@ -294,7 +287,7 @@
   {
     "year": "1927",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/kolthoff-analytical-chemistry.html",
+      "/content/acs/en/education/whatischemistry/landmarks/kolthoff-analytical-chemistry.html",
     "image": "assets/img/1927-kolthoff.jpg",
     "heading": "Modern Analytical Chemistry",
     "description":
@@ -303,7 +296,7 @@
   {
     "year": "1928",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/ramaneffect.html",
+      "/content/acs/en/education/whatischemistry/landmarks/ramaneffect.html",
     "image": "assets/img/1928-cvraman.jpg",
     "heading": "The Raman Effect",
     "description":
@@ -312,7 +305,7 @@
   {
     "year": "1928",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/flemingpenicillin.html",
+      "/content/acs/en/education/whatischemistry/landmarks/flemingpenicillin.html",
     "image": "assets/img/1928-alexander-fleming-penicillin.jpg",
     "heading": "Discovery of Penicillin",
     "description":
@@ -321,7 +314,7 @@
   {
     "year": "1928",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/fahssmithcollection.html",
+      "/content/acs/en/education/whatischemistry/landmarks/fahssmithcollection.html",
     "image": "assets/img/1928-smith-memorial-collection.jpg",
     "heading": "Smith Memorial Collection",
     "description":
@@ -330,7 +323,7 @@
   {
     "year": "1928",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/purdue-wetherill.html",
+      "/content/acs/en/education/whatischemistry/landmarks/purdue-wetherill.html",
     "image": "assets/img/1928-wetherill-lab-purdue-univ.jpg",
     "heading": "Wetherill Laboratory",
     "description":
@@ -339,7 +332,7 @@
   {
     "year": "1928",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/carotherspolymers.html",
+      "/content/acs/en/education/whatischemistry/landmarks/carotherspolymers.html",
     "image": "assets/img/1928-wcarothers-neoprene.jpg",
     "heading": "Wallace Carothers' Polymers",
     "description":
@@ -348,7 +341,7 @@
   {
     "year": "1928",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/thomas-edison.html",
+      "/content/acs/en/education/whatischemistry/landmarks/thomas-edison.html",
     "image": "assets/img/edison.jpg",
     "heading": "Thomas Edison's Botanical Lab",
     "description":
@@ -357,7 +350,7 @@
   {
     "year": "1930",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/scotchtape.html",
+      "/content/acs/en/education/whatischemistry/landmarks/scotchtape.html",
     "image": "assets/img/1930-scotch-tape.jpg",
     "heading": "Scotch Transparent Tape",
     "description":
@@ -366,7 +359,7 @@
   {
     "year": "1932",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/savannahpaper.html",
+      "/content/acs/en/education/whatischemistry/landmarks/savannahpaper.html",
     "image": "assets/img/1932-charles-herty.jpg",
     "heading": "Savannah Pulp and Paper Lab",
     "description":
@@ -374,8 +367,7 @@
   },
   {
     "year": "1935",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/julian.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/julian.html",
     "image": "assets/img/1935-percy-julian-physostigmine.jpg",
     "heading": "Synthesis of Physostigmine",
     "description":
@@ -383,8 +375,7 @@
   },
   {
     "year": "1935",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/beckman.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/beckman.html",
     "image": "assets/img/1935-beckman-ph-meter.jpg",
     "heading": "Beckman pH Meter",
     "description":
@@ -392,8 +383,7 @@
   },
   {
     "year": "1937",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/houdry.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/houdry.html",
     "image": "assets/img/1937-houdry-process-gasoline.jpg",
     "heading": "Houdry Process",
     "description":
@@ -402,7 +392,7 @@
   {
     "year": "1937",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/szentgyorgyi.html",
+      "/content/acs/en/education/whatischemistry/landmarks/szentgyorgyi.html",
     "image": "assets/img/1937-albert-szent-gyorgyi.jpg",
     "heading": "Discovery of Vitamin C",
     "description":
@@ -411,7 +401,7 @@
   {
     "year": "1938",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/progesteronesynthesis.html",
+      "/content/acs/en/education/whatischemistry/landmarks/progesteronesynthesis.html",
     "image": "assets/img/1938-russell-marker.jpg",
     "heading": "Mexican Steroid Industry",
     "description":
@@ -420,7 +410,7 @@
   {
     "year": "1939",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/flemingpenicillin.html",
+      "/content/acs/en/education/whatischemistry/landmarks/flemingpenicillin.html",
     "image": "assets/img/1939-penicillin-production.jpg",
     "heading": "Development of Penicillin",
     "description":
@@ -429,7 +419,7 @@
   {
     "year": "1939",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/selmanwaksman.html",
+      "/content/acs/en/education/whatischemistry/landmarks/selmanwaksman.html",
     "image": "assets/img/1939-swaksman-antibiotics.jpg",
     "heading": "Selman Waksman and Antibiotics",
     "description":
@@ -438,7 +428,7 @@
   {
     "year": "1939",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/carotherspolymers.html",
+      "/content/acs/en/education/whatischemistry/landmarks/carotherspolymers.html",
     "image": "assets/img/1939-dupont-nylon.jpg",
     "heading": "Production of Nylon",
     "description":
@@ -446,8 +436,7 @@
   },
   {
     "year": "1941",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/kem-tone.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/kem-tone.html",
     "image": "assets/img/1941-kem-tone-paint.jpg",
     "heading": "Kem-Tone Wall Finish",
     "description":
@@ -456,7 +445,7 @@
   {
     "year": "1941",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/penicillin.html",
+      "/content/acs/en/education/whatischemistry/landmarks/penicillin.html",
     "image": "assets/img/1941-pfizer-penicillin.jpg",
     "heading": "Deep-tank Fermentation",
     "description":
@@ -465,7 +454,7 @@
   {
     "year": "1942",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/fluidbedreactor.html",
+      "/content/acs/en/education/whatischemistry/landmarks/fluidbedreactor.html",
     "image": "assets/img/1942-fluid-bed-reactor.jpg",
     "heading": "Fluid Bed Reactor",
     "description":
@@ -474,7 +463,7 @@
   {
     "year": "1942",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/syntheticrubber.html",
+      "/content/acs/en/education/whatischemistry/landmarks/syntheticrubber.html",
     "image": "assets/img/1942-synthetic-rubber.jpg",
     "heading": "U.S. Synthetic Rubber Program ",
     "description":
@@ -483,7 +472,7 @@
   {
     "year": "1946",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/polymerresearchinstitute.html",
+      "/content/acs/en/education/whatischemistry/landmarks/polymerresearchinstitute.html",
     "image": "assets/img/1946-hmark-pri.jpg",
     "heading": "Polymer Research Institute",
     "description":
@@ -492,7 +481,7 @@
   {
     "year": "1946",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/tidedetergent.html",
+      "/content/acs/en/education/whatischemistry/landmarks/tidedetergent.html",
     "image": "assets/img/1946-tide-detergent.jpg",
     "heading": "Tide Detergent",
     "description":
@@ -501,7 +490,7 @@
   {
     "year": "1946",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/radioisotopes.html",
+      "/content/acs/en/education/whatischemistry/landmarks/radioisotopes.html",
     "image": "assets/img/1946-radioisotopes.jpg",
     "heading": "Production and Distribution of Radioisotopes",
     "description":
@@ -510,7 +499,7 @@
   {
     "year": "1947",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/carbohydratemetabolism.html",
+      "/content/acs/en/education/whatischemistry/landmarks/carbohydratemetabolism.html",
     "image": "assets/img/1947-carl-gerty-cori.jpg",
     "heading": "Carbohydrate Metabolism",
     "description":
@@ -519,7 +508,7 @@
   {
     "year": "1948",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/frozenfoods.html",
+      "/content/acs/en/education/whatischemistry/landmarks/frozenfoods.html",
     "image": "assets/img/1948-usda-frozen-foods.jpg",
     "heading": "Frozen Foods",
     "description":
@@ -528,7 +517,7 @@
   {
     "year": "1951",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/polypropylene.html",
+      "/content/acs/en/education/whatischemistry/landmarks/polypropylene.html",
     "image": "assets/img/1951-polypropylene-hdpe.jpg",
     "heading": "Polypropylene and HDPE",
     "description":
@@ -537,7 +526,7 @@
   {
     "year": "1953",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/staudingerpolymerscience.html",
+      "/content/acs/en/education/whatischemistry/landmarks/staudingerpolymerscience.html",
     "image": "assets/img/1953-hermann-staudinger-macro.jpg",
     "heading": "Hermann Staudinger",
     "description":
@@ -546,7 +535,7 @@
   {
     "year": "1953",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/acrylicemulsion.html",
+      "/content/acs/en/education/whatischemistry/landmarks/acrylicemulsion.html",
     "image": "assets/img/1953-acrylic-paint.jpg",
     "heading": "Acrylic Emulsion Technology",
     "description":
@@ -555,7 +544,7 @@
   {
     "year": "1953",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/usda-flavor-chemistry.html",
+      "/content/acs/en/education/whatischemistry/landmarks/usda-flavor-chemistry.html",
     "image": "assets/img/1953-flavor-chemistry.jpg",
     "heading": "Flavor Chemistry Research",
     "description":
@@ -564,7 +553,7 @@
   {
     "year": "1956",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/diagnosticteststrips.html",
+      "/content/acs/en/education/whatischemistry/landmarks/diagnosticteststrips.html",
     "image": "assets/img/1956-diagnostic-test-strips.jpg",
     "heading": "Diagnostic Test Strips",
     "description":
@@ -573,7 +562,7 @@
   {
     "year": "1957",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/radiationchemistry.html",
+      "/content/acs/en/education/whatischemistry/landmarks/radiationchemistry.html",
     "image": "assets/img/1957-radiation-chemistry.jpg",
     "heading": "Radiation Chemistry",
     "description":
@@ -582,7 +571,7 @@
   {
     "year": "1957",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/fooddehydration.html",
+      "/content/acs/en/education/whatischemistry/landmarks/fooddehydration.html",
     "image": "assets/img/1957-food-dehydration.jpg",
     "heading": "Food Dehydration Technology",
     "description":
@@ -590,8 +579,7 @@
   },
   {
     "year": "1957",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/dayglo.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/dayglo.html",
     "image": "assets/img/1957-dayglo-fluorescent-pigment.jpg",
     "heading": "DayGlo Fluorescent Pigments",
     "description":
@@ -600,7 +588,7 @@
   {
     "year": "1958",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/carbonfibers.html",
+      "/content/acs/en/education/whatischemistry/landmarks/carbonfibers.html",
     "image": "assets/img/1958-carbon-fiber.jpg",
     "heading": "Carbon Fibers",
     "description":
@@ -609,7 +597,7 @@
   {
     "year": "1960",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/acrylonitrile.html",
+      "/content/acs/en/education/whatischemistry/landmarks/acrylonitrile.html",
     "image": "assets/img/1960-sohio-acrylonitrile.jpg",
     "heading": "Sohio Acrylonitrile Process",
     "description":
@@ -617,8 +605,7 @@
   },
   {
     "year": "1960",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/mri.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/mri.html",
     "image": "assets/img/1960-nmr-spectrometer.jpg",
     "heading": "NMR Spectrometer",
     "description":
@@ -627,7 +614,7 @@
   {
     "year": "1960",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/keeling-curve.html",
+      "/content/acs/en/education/whatischemistry/landmarks/keeling-curve.html",
     "image": "assets/img/1960-keeling.jpg",
     "heading": "Atmospheric Carbon Dioxide",
     "description":
@@ -636,7 +623,7 @@
   {
     "year": "1961",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/geneticcode.html",
+      "/content/acs/en/education/whatischemistry/landmarks/geneticcode.html",
     "image": "assets/img/1961-genetic-code.jpg",
     "heading": "Deciphering the Genetic Code",
     "description":
@@ -645,7 +632,7 @@
   {
     "year": "1962",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/bartlettnoblegases.html",
+      "/content/acs/en/education/whatischemistry/landmarks/bartlettnoblegases.html",
     "image": "assets/img/1962-nbartlett.jpg",
     "heading": "Nobel Gas Chemistry",
     "description":
@@ -654,7 +641,7 @@
   {
     "year": "1962",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/rachel-carson-silent-spring.html",
+      "/content/acs/en/education/whatischemistry/landmarks/rachel-carson-silent-spring.html",
     "image": "assets/img/1962-rcarson-silent-spring.jpg",
     "heading": "Rachel Carson’s 'Silent Spring'",
     "description":
@@ -663,7 +650,7 @@
   {
     "year": "1966",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/camptothecintaxol.html",
+      "/content/acs/en/education/whatischemistry/landmarks/camptothecintaxol.html",
     "image": "assets/img/1966-taxol-camptothecin.jpg",
     "heading": "Camptothecin and Taxol",
     "description":
@@ -672,7 +659,7 @@
   {
     "year": "1969",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/cottonproducts.html",
+      "/content/acs/en/education/whatischemistry/landmarks/cottonproducts.html",
     "image": "assets/img/1969-cotton-fiber.jpg",
     "heading": "Cotton Products Research",
     "description":
@@ -680,8 +667,7 @@
   },
   {
     "year": "1973",
-    "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/mri.html",
+    "url": "/content/acs/en/education/whatischemistry/landmarks/mri.html",
     "image": "assets/img/1973-plauterbur-mri.jpg",
     "heading": "MRI Imaging",
     "description":
@@ -690,7 +676,7 @@
   {
     "year": "1976",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/cimetidinetagamet.html",
+      "/content/acs/en/education/whatischemistry/landmarks/cimetidinetagamet.html",
     "image": "assets/img/1976-tagamet-cimetidine.jpg",
     "heading": "Tagamet",
     "description":
@@ -699,7 +685,7 @@
   {
     "year": "1983",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/chemicalsfromcoal.html",
+      "/content/acs/en/education/whatischemistry/landmarks/chemicalsfromcoal.html",
     "image": "assets/img/1983-eastman-acetyl-chemicals.jpg",
     "heading": "Acetyl Chemicals from Coal",
     "description":
@@ -708,7 +694,7 @@
   {
     "year": "1985",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/fullerenes.html",
+      "/content/acs/en/education/whatischemistry/landmarks/fullerenes.html",
     "image": "assets/img/1985-fullerene.jpg",
     "heading": "Discovery of Fullerenes",
     "description":
@@ -717,7 +703,7 @@
   {
     "year": "1992",
     "url":
-      "http://www.acs.org/content/acs/en/education/whatischemistry/landmarks/williams-milescollection.html",
+      "/content/acs/en/education/whatischemistry/landmarks/williams-milescollection.html",
     "image": "assets/img/1992-williams-miles-harding-univ.jpg",
     "heading": "Williams-Miles Collection",
     "description":

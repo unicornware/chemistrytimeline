@@ -1,9 +1,6 @@
 // react
 import * as React from "react";
 
-// jquery
-import $ from "jquery";
-
 // helpers
 import LandmarkGenerator from "../helpers/LandmarkGenerator.js";
 
@@ -69,24 +66,6 @@ export default class Timeline extends React.Component {
   };
 
   /**
-   * Scrolls the timeline backwards.
-   * @memberof Timeline
-   */
-  previous = () => {
-    let scroll = $("#timeline").scrollLeft() - $("#col-0").width() * 2;
-    $("#timeline").animate({ scrollLeft: scroll }, 500, "swing");
-  };
-
-  /**
-   * Scrolls the timeline forward.
-   * @memberof Timeline
-   */
-  next = () => {
-    let scroll = $("#timeline").scrollLeft() + $("#col-0").width() * 2;
-    $("#timeline").animate({ scrollLeft: scroll }, 500, "swing");
-  };
-
-  /**
    * Populated by makeCols(), this method generates
    * div#timeline and its children.
    *
@@ -94,16 +73,6 @@ export default class Timeline extends React.Component {
    * @memberof Timeline
    */
   render() {
-    return (
-      <div id="timeline">
-        <button id="timeline-prev" onClick={this.previous}>
-          <i className="fas fa-chevron-left" />
-        </button>
-        {this.makeCols()}
-        <button id="timeline-next" onClick={this.next}>
-          <i className="fas fa-chevron-right" />
-        </button>
-      </div>
-    );
+    return <div id="timeline">{this.makeCols()}</div>;
   }
 }

@@ -4,29 +4,25 @@
 // @parameter {string} $flexDirection - flex-direction
 // @param {string} $alignItems - align-items
 // @param {string} $justifyContent - justify-content
-@mixin flex($flexDirection, $alignItems, $justifyContent) {
-  display: flex !important;
-  flex-direction: $flexDirection;
-  align-items: $alignItems;
-  justify-content: $justifyContent;
+=flex($flexDirection, $alignItems, $justifyContent)
+  display: flex !important
+  flex-direction: $flexDirection
+  align-items: $alignItems
+  justify-content: $justifyContent
 
-  @content;
-}
+  @content
 
 // Mixin that bundles &:hover, &:active, and &:focus
-@mixin hocus {
+=hocus
   &:hover,
   &:active,
-  &:focus {
-    @content;
-  }
-}
+  &:focus
+    @content
 
 // Mixin for transitions.
 // @param {string} $prop - transition-propery
 // @param {string} $duration - transition-duration
 // @param {string} $timing - transition-timing-function
 // @param {string} $delay - transition-delay
-@mixin transition($prop, $duration, $timing, $delay) {
-  transition: $prop $duration $timing $delay;
-}
+=transition($prop, $duration, $timing, $delay)
+  transition: $prop $duration $timing $delay

@@ -16,17 +16,11 @@ const Navigation = () => {
     <nav id="navigation">
       {/* maps over routes from routes.js file. returns four routes */}
       {routes.map((route, i) => {
-        // route.route has a pound symbol (#) before the corresponding route.
+        // route.to has a pound symbol (#) before the corresponding route.
         // starting at index at 1 to remove the #
-        let id = "nav-link-" + route.route.substring(1, route.route.length);
+        let id = "nav-link-" + route.to.substring(1, route.to.length);
         return (
-          <NavLink
-            key={id}
-            className="nav-link"
-            id={id}
-            to={route.route}
-            smooth
-          >
+          <NavLink key={id} className="nav-link" id={id} to={route.to} smooth>
             {route.name}
           </NavLink>
         );

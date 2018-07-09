@@ -1,0 +1,5 @@
+// functions
+
+@function breakpoint($breakpointName)
+  @if map-has-key($breaks, $breakpointName)
+    @return map-get($breaks, $breakpointName)

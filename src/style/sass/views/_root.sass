@@ -1,16 +1,15 @@
-/* ROOT CONTAINER STYLES - VIEWS/ROOT.SCSS
+/* ROOT CONTAINER STYLES - VIEWS/ROOT.SASS
 
 #app-root
   margin: 0 auto
   width: 1170px
 
-  @media all and (max-width: breakpoint("acs-med"))
+  @media all and (max-width: breakpoint(acs-med))
     width: 970px
 
-  @media all and (max-width: breakpoint("acs-small"))
-    width: 750px
+  @media all and (max-width: breakpoint(acs-small))
+    +flex(column, center, center)
 
-  @media all and (max-width: breakpoint("x-small"))
     width: 100%
 
 .timeline-container
@@ -39,7 +38,7 @@
   &:last-of-type()
     box-shadow: 2.5px 2.5px 5px 2.5px rgba($black, 0.25)
 
-  @media all and (max-width: $first-break)
+  @media all and (max-width: breakpoint(acs-small))
     display: none
 
 #modal-root

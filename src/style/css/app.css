@@ -342,6 +342,9 @@ header .wrapper .subheading {
 
 @media all and (max-width: 768px) {
   .years {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
@@ -351,19 +354,10 @@ header .wrapper .subheading {
 
 @media all and (max-width: 650px) {
   .years {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     margin: 0;
     width: 100%;
   }
@@ -631,7 +625,7 @@ header .wrapper .subheading {
 
 .modal-landmark-year {
   font-size: 2em;
-  margin: 0 0 .25em;
+  margin: 0 0 0.25em;
 }
 
 .modal-landmark-heading {
@@ -644,7 +638,7 @@ header .wrapper .subheading {
 .modal-landmark-descrip {
   font-size: 1.2em;
   font-weight: 300;
-  margin: .5em 0 2em;
+  margin: 0.5em 0 2em;
 }
 
 .modal-landmark-link {
@@ -668,12 +662,19 @@ header .wrapper .subheading {
 
 @media all and (max-width: 768px) {
   #app-root {
-    width: 750px;
-  }
-}
-
-@media all and (max-width: 650px) {
-  #app-root {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: 100%;
   }
 }
@@ -793,7 +794,7 @@ header .wrapper .subheading {
     flex-direction: column;
     margin-top: 200px;
     overflow: hidden;
-    padding: 1em 1.5em 0;
+    padding: 1em 1.75em 0;
   }
 }
 

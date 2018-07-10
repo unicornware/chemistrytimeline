@@ -1,4 +1,4 @@
-/* HEADER STYLES - HEADER.SCSS
+/* HEADER STYLES - HEADER.SASS
 
 header
   +flex(row, center, center)
@@ -6,11 +6,13 @@ header
   margin-bottom: 1.25em
   width: 100%
 
-  @media all and (max-width: $first-break)
+  @media all and (max-width: breakpoint(acs-small))
     background-color: $white
     position: fixed
 
-    // 50px = size of aem header
+    /* 50px = size of aem top header/nav
+    */
+
     top: 50px
     z-index: 5
 
@@ -24,7 +26,7 @@ header
       font-size: 2.5em
       margin: 0.5em 0 0.375em
 
-      @media all and (max-width: $first-break)
+      @media all and (max-width: breakpoint(acs-small))
         font-size: 2em
 
     .subheading

@@ -11,4 +11,4 @@ Afterwards, run `gulp` to compile Sass. With gulp running, open another terminal
 
 # Changing the Data
 
-To change the data, edit the `landmarks.json` file under `src > data`. If you'd like to add a new json file, you must have the following keys: year, url, image, heading, and description. The century key is optional. After making sure you have the correct keys, you must update `LandmarkGenerator.js` on line 8. Change the line from `import landmarks from "../data/landmarks.json";` to `import landmarks from "../data/{NAME_OF_YOUR_FILE}.json";`.
+To change the data, edit the `landmarks.json` file under `src/data`. If you'd like to add a new json file, you must have the following keys: year, url, image, heading, and description. The century key is optional. After making sure you have the correct keys, you must update `LandmarkGenerator.js` on line 8. Change the line from `import landmarks from "../data/landmarks.json";` to `import landmarks from "../data/{NAME_OF_YOUR_FILE}.json";`. To update the images, add the images to `public/assets/img/`. When referencing the images in the json file, the path should be `assets/img/{IMAGE_FILE_NAME}.{EXTENTSION}`.

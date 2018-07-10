@@ -707,19 +707,7 @@ header .wrapper .subheading {
  * VIEWS/ROOT.SASS */
 #app-root {
   margin: 0 auto;
-  width: 1170px;
-}
-
-@media all and (min-width: 1440px) {
-  #app-root {
-    width: 100%;
-  }
-}
-
-@media all and (max-width: 992px) {
-  #app-root {
-    width: 970px;
-  }
+  width: 100%;
 }
 
 @media all and (max-width: 768px) {
@@ -737,7 +725,6 @@ header .wrapper .subheading {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    width: 100%;
   }
 }
 

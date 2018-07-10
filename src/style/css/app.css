@@ -103,7 +103,8 @@ button {
 }
 
 /* BEGIN COMPONENT STYLES -- COMPONENTS-DIR.SCSS */
-/* HEADER STYLES - HEADER.SCSS */
+/* HEADER STYLES - HEADER.SASS */
+/* 50px = size of aem top header/nav */
 header {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -167,7 +168,7 @@ header .wrapper .subheading {
   margin: 0.375em 0 0;
 }
 
-/* NAVIGATION STYLES - COMPONENTS/NAVIGATION.SCSS */
+/* NAVIGATION STYLES - COMPONENTS/NAVIGATION.SASS */
 #navigation .nav-link:hover, #navigation .nav-link:active, #navigation .nav-link:focus, #navigation.active {
   border-bottom: 4px solid #ffc72c;
   color: #000;
@@ -189,11 +190,11 @@ header .wrapper .subheading {
 @media all and (max-width: 768px) {
   #navigation .nav-link {
     font-size: 1.75em;
-    margin: 0 .5em;
+    margin: 0 0.5em;
   }
 }
 
-/* LANDMARK STYLES - COMPONENTS/LANDMARK.SCSS */
+/* LANDMARK STYLES - COMPONENTS/LANDMARK.SASS */
 .landmark-container {
   height: 50%;
 }
@@ -648,7 +649,7 @@ header .wrapper .subheading {
 }
 
 /* BEGIN VIEW SPECIFIC STYLES -- VIEWS-DIR.SCSS */
-/* ROOT CONTAINER STYLES - VIEWS/ROOT.SCSS */
+/* ROOT CONTAINER STYLES - VIEWS/ROOT.SASS */
 #app-root {
   margin: 0 auto;
   width: 1170px;
@@ -766,7 +767,7 @@ header .wrapper .subheading {
   }
 }
 
-/* TIMELINE STYLES - VIEWS/TIMELINE.SCSS */
+/* TIMELINE STYLES - VIEWS/TIMELINE.SASS */
 #timeline {
   display: -webkit-box !important;
   display: -ms-flexbox !important;

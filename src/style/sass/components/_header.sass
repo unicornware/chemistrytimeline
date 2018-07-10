@@ -1,5 +1,8 @@
 /* HEADER STYLES - HEADER.SASS
 
+/* 50px = size of aem top header/nav
+$offset: 50px
+
 header
   +flex(row, center, center)
 
@@ -9,11 +12,7 @@ header
   @media all and (max-width: breakpoint(acs-small))
     background-color: $white
     position: fixed
-
-    /* 50px = size of aem top header/nav
-    */
-
-    top: 50px
+    top: $offset
     z-index: 5
 
   .wrapper

@@ -1,7 +1,9 @@
-/* LANDMARK STYLES - COMPONENTS/LANDMARK.SASS
+/* LANDMARK COMPONENT STYLES
+ * COMPONENTS/LANDMARK.JSX
+ * COMPONENTS/LANDMARK.SASS
 
 .landmark-container
-  height: 50%
+  height: 322.5px
 
   @media all and (max-width: breakpoint(acs-small))
     +flex(row-reverse, center, space-between)
@@ -29,15 +31,39 @@
   p
     margin: 0
 
-// special landmark-container classes
+/* special landmark-container classes
+
+.landmark-container-top,
+.landmark-container-bttm
+  .landmark-line
+    height: 50px
+
+  &:not(.single)
+    .landmark-heading
+      padding-left: 0.125em
+      width: 125%
+
+      @media all and (max-width: breakpoint(acs-small))
+        padding-left: 0
+        width: 100%
+
 .landmark-container-top
   +flex(column, center, center)
 
   &.single
-    margin-bottom: 175px
+    margin-bottom: 132.5px
+
+    .landmark-line
+      margin-top: 12.5px
 
   &:not(.single)
-    padding-bottom: 4px
+    padding-bottom: 3.5px
+
+  .landmark-year
+    margin-top: 0.125em
+
+  .landmark-heading
+    margin-bottom: 0.5em
 
 .landmark-container-bttm
   +flex(column-reverse, center, center)
@@ -49,17 +75,23 @@
     margin-bottom: 5px
 
   &.single
-    margin-top: 175px
+    margin-top: 132.5px
+
+    .landmark-line
+      margin-bottom: 12.5px
 
     @media all and (max-width: breakpoint(acs-small))
       margin-top: 0
 
   &:not(.single)
-    padding-top: 2.5px
+    padding-top: 3.5px
 
-// landmark-0 container
+  .landmark-year
+    margin-bottom: 0.125em
+
+/* #landmark-0 container
 .landmark-container-bttm.special
-  margin-bottom: 32.5px
+  margin-bottom: 52.5px
 
 .years
   +flex(column, center, center)
@@ -67,14 +99,12 @@
   height: 37.5px
 
   @media all and (max-width: breakpoint(acs-small))
-    justify-content: space-between
     order: 1
     margin: 0 0.375em 0 0
 
   @media all and (max-width: breakpoint(x-small))
-    // +flex(row, center, space-between)
-
     flex-direction: row
+    justify-content: space-between
     margin: 0
     width: 100%
 
@@ -98,7 +128,7 @@
       margin: 0
 
 .info
-  +flex(column, flex-start, flex-start)
+  +flex(column, center, flex-start)
 
   height: 37.5px
 
@@ -112,11 +142,13 @@
     width: 100%
 
 .landmark-heading
+  color: $blue
+  font-size: 0.875em
   text-align: center
+  width: 100%
 
   +hocus
     cursor: pointer
-    color: $blue
 
 
   @media all and (max-width: breakpoint(acs-small))
@@ -149,6 +181,7 @@
     margin: 0
 
 .landmark-link
+  align-self: flex-start
   color: $black
   font:
     size: 1.05em
@@ -165,7 +198,7 @@
 
 .landmark-line
   border-left: 3px solid rgba($black, 0.25)
-  height: 100px
+  height: 75px
 
   @media all and (max-width: breakpoint(acs-small))
     margin: 0 !important
@@ -180,13 +213,13 @@
 
 
   height: 200px
-  width: 235px
+  width: 225px
 
   @media all and (max-width: breakpoint(acs-small))
-    height: 160px
-    width: 210px
+    height: 150px
+    width: 200px
 
   @media all and (max-width: breakpoint(x-small))
     height: 200px
     margin: 1em 0 1.5em
-    width: 235px
+    width: 225px

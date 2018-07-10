@@ -14,7 +14,6 @@ import Header from "./components/Header.jsx";
 import Timeline from "./views/Timeline.jsx";
 
 //style
-import "./style/css/normalize.min.css";
 import "./style/css/app.min.css";
 
 export default class App extends React.Component {

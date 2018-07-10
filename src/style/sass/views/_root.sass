@@ -1,8 +1,13 @@
-/* ROOT CONTAINER STYLES - VIEWS/ROOT.SASS
+/* ROOT CONTAINER STYLES
+ * INDEX.HTML#APP-ROOT, APP.JSX, INDEX.HTML#MODAL-ROOT
+ * VIEWS/ROOT.SASS
 
 #app-root
   margin: 0 auto
   width: 1170px
+
+  @media all and (min-width: breakpoint(x-large))
+    width: 100%
 
   @media all and (max-width: breakpoint(acs-med))
     width: 970px
@@ -15,16 +20,21 @@
 .timeline-container
   +flex(row, center, center)
 
-// buttons
 .btn-container
   position: absolute
   z-index: 5
 
   &:first-of-type()
-    left: 65px
+    left: 25px
+
+    @media all and (min-width: breakpoint(x-large))
+      left: 10px
 
   &:last-of-type()
-    right: 65px
+    right: 25px
+
+    @media all and (min-width: breakpoint(x-large))
+      right: 10px
 
 .btn-scroll-timeline
   @extend %button

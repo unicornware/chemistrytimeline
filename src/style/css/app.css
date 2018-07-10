@@ -1,7 +1,8 @@
-/* BEGIN BASE STYLES -- BASE-DIR.SASS */
+/* BEGIN BASE STYLES
+ * BASE-DIR.SASS */
 /* FONTS - FONTS.SASS */
-/* open sans */
-/* COMMON STYLES -- COMMON.SASS */
+/* COMMON STYLES
+ * COMMON.SASS */
 * {
   -webkit-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s;
@@ -46,7 +47,8 @@ button {
   outline: none;
 }
 
-/* HELPER CLASSES -- HELPERS.SCSS */
+/* HELPER CLASSES
+ * HELPERS.SASS */
 #close, .btn-scroll-timeline {
   border-radius: 50%;
   height: 50px;
@@ -98,12 +100,11 @@ button {
   width: 150%;
 }
 
-.embed {
-  position: relative;
-}
-
-/* BEGIN COMPONENT STYLES -- COMPONENTS-DIR.SCSS */
-/* HEADER STYLES - HEADER.SASS */
+/* BEGIN COMPONENT STYLES
+ * COMPONENTS-DIR.SASS */
+/* HEADER STYLES
+ * COMPONENTS/HEADER.JSX
+ * COMPONENTS/HEADER.SASS */
 /* 50px = size of aem top header/nav */
 header {
   display: -webkit-box !important;
@@ -153,8 +154,8 @@ header .wrapper .heading, header .wrapper .subheading {
 }
 
 header .wrapper .heading {
-  font-size: 2.5em;
-  margin: 0.5em 0 0.375em;
+  font-size: 2em;
+  margin: 0.5em 0 0.25em;
 }
 
 @media all and (max-width: 768px) {
@@ -164,11 +165,13 @@ header .wrapper .heading {
 }
 
 header .wrapper .subheading {
-  font-size: 1.25em;
+  font-size: 1em;
   margin: 0.375em 0 0;
 }
 
-/* NAVIGATION STYLES - COMPONENTS/NAVIGATION.SASS */
+/* NAVIGATION STYLES
+ * COMPONENTS/NAVIGATION.JSX
+ * COMPONENTS/NAVIGATION.SASS */
 #navigation .nav-link:hover, #navigation .nav-link:active, #navigation .nav-link:focus, #navigation.active {
   border-bottom: 4px solid #ffc72c;
   color: #000;
@@ -181,7 +184,7 @@ header .wrapper .subheading {
 
 #navigation .nav-link {
   color: rgba(0, 0, 0, 0.375);
-  font-size: 2em;
+  font-size: 1.75em;
   font-weight: 300;
   margin: 0 1em;
   text-align: center;
@@ -189,14 +192,16 @@ header .wrapper .subheading {
 
 @media all and (max-width: 768px) {
   #navigation .nav-link {
-    font-size: 1.75em;
+    font-size: 1.5em;
     margin: 0 0.5em;
   }
 }
 
-/* LANDMARK STYLES - COMPONENTS/LANDMARK.SASS */
+/* LANDMARK COMPONENT STYLES
+ * COMPONENTS/LANDMARK.JSX
+ * COMPONENTS/LANDMARK.SASS */
 .landmark-container {
-  height: 50%;
+  height: 322.5px;
 }
 
 @media all and (max-width: 768px) {
@@ -256,6 +261,26 @@ header .wrapper .subheading {
   margin: 0;
 }
 
+/* special landmark-container classes */
+.landmark-container-top .landmark-line,
+.landmark-container-bttm .landmark-line {
+  height: 50px;
+}
+
+.landmark-container-top:not(.single) .landmark-heading,
+.landmark-container-bttm:not(.single) .landmark-heading {
+  padding-left: 0.125em;
+  width: 125%;
+}
+
+@media all and (max-width: 768px) {
+  .landmark-container-top:not(.single) .landmark-heading,
+  .landmark-container-bttm:not(.single) .landmark-heading {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
 .landmark-container-top {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -273,11 +298,23 @@ header .wrapper .subheading {
 }
 
 .landmark-container-top.single {
-  margin-bottom: 175px;
+  margin-bottom: 132.5px;
+}
+
+.landmark-container-top.single .landmark-line {
+  margin-top: 12.5px;
 }
 
 .landmark-container-top:not(.single) {
-  padding-bottom: 4px;
+  padding-bottom: 3.5px;
+}
+
+.landmark-container-top .landmark-year {
+  margin-top: 0.125em;
+}
+
+.landmark-container-top .landmark-heading {
+  margin-bottom: 0.5em;
 }
 
 .landmark-container-bttm {
@@ -307,7 +344,11 @@ header .wrapper .subheading {
 }
 
 .landmark-container-bttm.single {
-  margin-top: 175px;
+  margin-top: 132.5px;
+}
+
+.landmark-container-bttm.single .landmark-line {
+  margin-bottom: 12.5px;
 }
 
 @media all and (max-width: 768px) {
@@ -317,11 +358,16 @@ header .wrapper .subheading {
 }
 
 .landmark-container-bttm:not(.single) {
-  padding-top: 2.5px;
+  padding-top: 3.5px;
 }
 
+.landmark-container-bttm .landmark-year {
+  margin-bottom: 0.125em;
+}
+
+/* #landmark-0 container */
 .landmark-container-bttm.special {
-  margin-bottom: 32.5px;
+  margin-bottom: 52.5px;
 }
 
 .years {
@@ -343,9 +389,6 @@ header .wrapper .subheading {
 
 @media all and (max-width: 768px) {
   .years {
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
     order: 1;
@@ -359,6 +402,9 @@ header .wrapper .subheading {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin: 0;
     width: 100%;
   }
@@ -401,9 +447,9 @@ header .wrapper .subheading {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
@@ -426,12 +472,14 @@ header .wrapper .subheading {
 }
 
 .landmark-heading {
+  color: #004fa7;
+  font-size: 0.875em;
   text-align: center;
+  width: 100%;
 }
 
 .landmark-heading:hover, .landmark-heading:active, .landmark-heading:focus {
   cursor: pointer;
-  color: #004fa7;
 }
 
 @media all and (max-width: 768px) {
@@ -483,6 +531,8 @@ header .wrapper .subheading {
 }
 
 .landmark-link {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   color: #000;
   font-size: 1.05em;
   font-weight: 600;
@@ -504,7 +554,7 @@ header .wrapper .subheading {
 
 .landmark-line {
   border-left: 3px solid rgba(0, 0, 0, 0.25);
-  height: 100px;
+  height: 75px;
 }
 
 @media all and (max-width: 768px) {
@@ -523,7 +573,7 @@ header .wrapper .subheading {
 
 .landmark {
   height: 200px;
-  width: 235px;
+  width: 225px;
 }
 
 .landmark:hover, .landmark:active, .landmark:focus {
@@ -532,8 +582,8 @@ header .wrapper .subheading {
 
 @media all and (max-width: 768px) {
   .landmark {
-    height: 160px;
-    width: 210px;
+    height: 150px;
+    width: 200px;
   }
 }
 
@@ -541,11 +591,13 @@ header .wrapper .subheading {
   .landmark {
     height: 200px;
     margin: 1em 0 1.5em;
-    width: 235px;
+    width: 225px;
   }
 }
 
-/* MODAL STYLES - COMPONENTS/MODAL.SCSS */
+/* MODAL STYLES
+ * COMPONENTS/MODAL.JSX
+ * COMPONENTS/MODAL.SASS */
 .modal {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -648,11 +700,20 @@ header .wrapper .subheading {
   font-weight: 600;
 }
 
-/* BEGIN VIEW SPECIFIC STYLES -- VIEWS-DIR.SCSS */
-/* ROOT CONTAINER STYLES - VIEWS/ROOT.SASS */
+/* BEGIN VIEW STYLES
+ * VIEWS-DIR.SASS */
+/* ROOT CONTAINER STYLES
+ * INDEX.HTML#APP-ROOT, APP.JSX, INDEX.HTML#MODAL-ROOT
+ * VIEWS/ROOT.SASS */
 #app-root {
   margin: 0 auto;
   width: 1170px;
+}
+
+@media all and (min-width: 1440px) {
+  #app-root {
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 992px) {
@@ -702,11 +763,23 @@ header .wrapper .subheading {
 }
 
 .btn-container:first-of-type {
-  left: 65px;
+  left: 25px;
+}
+
+@media all and (min-width: 1440px) {
+  .btn-container:first-of-type {
+    left: 10px;
+  }
 }
 
 .btn-container:last-of-type {
-  right: 65px;
+  right: 25px;
+}
+
+@media all and (min-width: 1440px) {
+  .btn-container:last-of-type {
+    right: 10px;
+  }
 }
 
 .btn-scroll-timeline {
@@ -767,7 +840,9 @@ header .wrapper .subheading {
   }
 }
 
-/* TIMELINE STYLES - VIEWS/TIMELINE.SASS */
+/* TIMELINE STYLES
+ * VIEWS/TIMELINE.JSX
+ * VIEWS/TIMELINE.SASS */
 #timeline {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -782,7 +857,8 @@ header .wrapper .subheading {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
   position: relative;
   width: 100%;
 }
@@ -824,7 +900,7 @@ header .wrapper .subheading {
 }
 
 .timeline-col:nth-of-type(even) {
-  margin: 0 -52.5px 0;
+  margin: 0 -50px 0;
 }
 
 @media all and (max-width: 768px) {

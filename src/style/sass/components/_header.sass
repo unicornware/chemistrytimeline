@@ -2,34 +2,30 @@
  * COMPONENTS/HEADER.JSX
  * COMPONENTS/HEADER.SASS
 
-/* 50px = size of aem top header/nav
-$offset: 50px
-
 header
   +flex(row, center, center)
 
   margin-bottom: 1.25em
+  top: 0
   width: 100%
 
   @media all and (max-width: breakpoint(acs-small))
     background-color: $white
+    box-shadow: 5px 0px 5px 2.5px rgba($black, 0.125)
     position: fixed
-    top: $offset
     z-index: 5
 
   .wrapper
     +flex(column, center, center)
 
-    .heading, .subheading
-      text-align: center
+.heading,
+.subheading
+  text-align: center
 
-    .heading
-      font-size: 2em
-      margin: 0.5em 0 0.25em
+.heading
+  font-size: 2em
+  margin: 0.5em 0 0.125em
 
-      @media all and (max-width: breakpoint(acs-small))
-        font-size: 2em
-
-    .subheading
-      font-size: 1em
-      margin: 0.375em 0 0
+.subheading
+  font-size: 1em
+  margin: 0

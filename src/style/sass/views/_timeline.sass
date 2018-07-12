@@ -14,7 +14,8 @@
   @media all and (max-width: breakpoint(acs-small))
     flex-direction: column
     margin-top: 200px
-    overflow: hidden
+
+    // overflow: hidden
     padding: 1em 1.75em 0
 
 // general column styles
@@ -24,14 +25,19 @@
   width: 275px
 
   @media all and (max-width: breakpoint(acs-small))
+    flex-direction: column-reverse
     height: auto
+    padding: 0 0 2em
     width: 100%
 
-.timeline-col:nth-of-type(even)
-  margin: 0 -50px 0
+  &:nth-of-type(even)
+    margin: 0 -50px 0
 
-  @media all and (max-width: breakpoint(acs-small))
-    margin: 0
+    @media all and (max-width: breakpoint(acs-small))
+      margin: 0
+
+  @media all and (max-width: breakpoint(x-small))
+    padding-bottom: 0
 
 // special column style
 #col-2

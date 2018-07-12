@@ -39,6 +39,7 @@ export default class Landmark extends React.Component {
    */
   openModal = e => {
     if ($(window).width() > variables.FIRST_BREAK) {
+      e.preventDefault();
       $("#modal-root")
         .removeClass("hide")
         .addClass("show");
@@ -66,32 +67,10 @@ export default class Landmark extends React.Component {
       <h1 className="century">{data.century}</h1>
     ) : null;
 
-    /*
-     * years styling, based on the presence of props.century
-     * if the window width is between 600 and 768px,
-     * set align-self to baseline and justify-content to flex-start
-     * 
-     * if the width is less than or equal to 600px,
-     * set justify-content to flex-end
-     * 
-     * otherwise, if props.century doesn't exist,
-     * don't add any styling
-    */
-    let yearsStyle =
-      century &&
-      $(window).width() <= variables.FIRST_BREAK &&
-      $(window).width() > variables.SECOND_BREAK
-        ? { alignSelf: "baseline", justifyContent: "flex-start" }
-        : !century && $(window).width() <= variables.SECOND_BREAK
-          ? { justifyContent: "flex-end" }
-          : {};
-
     return (
       <div className={containerStyle} id={data.century}>
-        <div className="years" style={yearsStyle}>
-          {century}
-          <h1 className="landmark-year">{data.year}</h1>
-        </div>
+        {century}
+        <h1 className="landmark-year">{data.year}</h1>
         <LandmarkInfo {...data} openModal={this.openModal} />
 
         <div className="landmark-line" />
@@ -112,9 +91,14 @@ export default class Landmark extends React.Component {
 const LandmarkInfo = props => {
   return (
     <div className="info">
-      <p className="landmark-heading" role="button" onClick={props.openModal}>
+      <a
+        href={props.url}
+        target="_blank"
+        className="landmark-heading"
+        onClick={props.openModal}
+      >
         {props.heading}
-      </p>
+      </a>
       <p className="landmark-description">{props.description}</p>
       <a href={props.url} className="landmark-link">
         Read More <i className="fas fa-chevron-right" />
@@ -123,6 +107,12 @@ const LandmarkInfo = props => {
   );
 };
 
+/**
+ * Class representing a point on the timeline.
+ *
+ * @class Landmark
+ * @extends React.Component
+ */
 /**
  * Functional component that contains the landmark image.
  * The outer div is styled to be shaped like a hexagon,
@@ -133,13 +123,14 @@ const LandmarkInfo = props => {
  */
 const LandmarkHexagon = props => {
   return (
-    <div
+    <a
+      href={props.url}
+      target="_blank"
+      onClick={e => props.openModal(e)}
       className="landmark hexagon"
-      id={props.key}
-      role="button"
-      onClick={props.openModal}
+      id={props.id}
     >
       <img className="landmark-img" src={props.image} alt={props.heading} />
-    </div>
+    </a>
   );
 };

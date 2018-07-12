@@ -1,5 +1,15 @@
 // functions
 
+// convert px values to em values
+@function px-to-em($px)
+  @if unitless($px)
+    $px: $px * 1px
+
+  @return #{$px / 16px}em
+
+// gets breakpoint values from map $breakpoint
 @function breakpoint($breakpointName)
-  @if map-has-key($breaks, $breakpointName)
-    @return map-get($breaks, $breakpointName)
+  @if map-has-key($breakpoints, $breakpointName)
+    @return map-get($breakpoints, $breakpointName)
+  @else
+    @error "The value #{breakpointName} is not in the map $breakpoints"

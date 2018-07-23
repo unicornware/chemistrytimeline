@@ -319,7 +319,7 @@ header .wrapper {
     color: #ffc72c;
     margin: 0;
     right: 0;
-    top: 2.5em;
+    top: 2em;
   }
 }
 
@@ -335,7 +335,7 @@ header .wrapper {
 
 @media all and (max-width: 40.625em) {
   .landmark-year {
-    font-size: 1.75em;
+    font-size: 1.5em;
     left: 0;
     position: absolute;
     text-align: left;

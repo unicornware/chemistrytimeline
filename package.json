@@ -9,7 +9,8 @@
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.2.2",
     "react-router-hash-link": "^1.2.0",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-svg-draw": "0.0.11"
   },
   "devDependencies": {
     "gulp": "github:gulpjs/gulp#4.0",
@@ -24,5 +25,18 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "last 4 versions",
+      "Firefox ESR",
+      "not ie < 11"
+    ]
   }
 }

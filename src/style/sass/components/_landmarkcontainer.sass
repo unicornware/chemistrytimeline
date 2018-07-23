@@ -1,9 +1,13 @@
 /* LANDMARK COMPONENT STYLES
- * COMPONENTS/LANDMARK.JSX
- * COMPONENTS/LANDMARK.SASS
+ * COMPONENTS/LANDMARKCONTAINER.JSX
+ * COMPONENTS/LANDMARKCONTAINER.SASS
 
 .landmark-container
-  height: 322.5px
+  align-items: center
+  display: flex
+  height: 50%
+  justify-content: flex-end
+  width: 100%
 
   @media all and (max-width: breakpoint(acs-small))
     flex-direction: row-reverse !important
@@ -14,9 +18,9 @@
     width: 100%
 
   @media all and (max-width: breakpoint(x-small))
+    border-bottom: 2.5px solid rgba($black, 0.125)
     flex-direction: column-reverse !important
     justify-content: center !important
-    border-bottom: 2.5px solid rgba($gold, 0.375)
     margin: 0 !important
     padding: 2em 0 1em
 
@@ -27,9 +31,6 @@
 /* special landmark-container classes
 .landmark-container-top,
 .landmark-container-bttm
-  .landmark-line
-    height: 50px
-
   &:not(.single)
     .landmark-heading
       padding-left: 0.125em
@@ -40,17 +41,20 @@
         width: 100%
 
 .landmark-container-top
-  +flex(column, center, center)
+  flex-direction: column
 
   @media all and (min-width: breakpoint(acs-small))
+    .landmark-line
+      margin-top: 1.25em
+
     &.single
-      margin-bottom: 135px
+      margin-bottom: 127.5px
 
       .landmark-line
-        margin-top: 12.5px
+        margin-top: 2em
 
     &:not(.single)
-      padding-bottom: 3.5px
+      padding-bottom: 3.25px
 
     .landmark-year
       margin-top: 0.125em
@@ -59,7 +63,7 @@
       margin-bottom: 0.5em
 
 .landmark-container-bttm
-  +flex(column-reverse, center, center)
+  flex-direction: column-reverse
 
   @media all and (min-width: breakpoint(acs-small))
     .info
@@ -69,74 +73,71 @@
       margin-bottom: 5px
 
     &.single
-      margin-top: 135px
-
-      .landmark-line
-        margin-bottom: 12.5px
+      margin-top: 122.5px
 
     &:not(.single)
-      padding-top: 3.5px
+      padding-top: 3.25px
 
       .landmark-year
         margin-bottom: 0.125em
 
 /* #landmark-0 container
 .landmark-container-bttm.special
-  margin-bottom: 67.5px
+  margin-bottom: 90px
+
+.landmark-text
+  height: 47.5px
+
+  @media all and (max-width: breakpoint(acs-small))
+    height: auto
+    margin-left: px-to-em(35px)
+    width: 70%
+
+  @media all and (max-width: breakpoint(x-small))
+    margin: (-0.75em) 0 0.375em 0
+    width: auto
 
 .century,
 .landmark-year
   text-align: center
 
 .century
-  color: $gold
+  color: rgba($gold, 0.75)
   height: 0
   font-size: 1.5em
   margin: 0 0 1.5em 0
   position: absolute
   opacity: 0
   order: -1
-  top: -37.5px
+  right: 0
+  top: -50px
 
   @media all and (max-width: breakpoint(acs-small))
     height: auto
     opacity: 1
 
   @media all and (max-width: breakpoint(x-small))
-    color: $blue
+    color: $gold
     margin: 0
     right: 0
     top: 0.5em
 
 .landmark-year
   font-size: 1.875em
-  height: 37.5px
 
   @media all and (max-width: breakpoint(acs-small))
-    margin-bottom: 0.25em !important
-    order: 1
-    padding-right: 0.25em
+    text-align: left
 
   @media all and (max-width: breakpoint(x-small))
     font-size: 1.75em
+    left: 0
+    position: absolute
     text-align: left
+    top: 5px
     width: 100%
 
 .info
   +flex(column, center, flex-start)
-
-  height: 37.5px
-
-  @media all and (max-width: breakpoint(acs-small))
-    align-self: flex-end
-    height: 100%
-    margin-left: px-to-em(35px)
-    width: 70%
-
-  @media all and (max-width: breakpoint(x-small))
-    height: auto
-    margin-left: 0
-    width: 100%
 
 .landmark-heading
   color: $blue
@@ -150,11 +151,12 @@
 
   @media all and (max-width: breakpoint(acs-small))
     color: $blue
-    font-size: 1.375em
+    font:
+      size: 1.375em
+      weight: 600
     text-align: left
 
   @media all and (max-width: breakpoint(x-small))
-    font-weight: 600
     text-align: center
     width: 100%
 
@@ -192,9 +194,10 @@
 
 .landmark-line
   border-left: 3px solid rgba($black, 0.25)
-  height: 75px
+  height: 50px
 
   @media all and (max-width: breakpoint(acs-small))
+    display: none
     margin: 0 !important
     transform: rotate(90deg)
 
@@ -206,17 +209,15 @@
     cursor: pointer
 
 
-  height: 200px
-  width: 225px
-
   @media all and (max-width: breakpoint(acs-small))
-    height: 150px
-    width: 200px
+    // height: 150px
+    // width: 200px
 
   @media all and (max-width: breakpoint(x-small))
-    height: 200px
+    // height: 200px
     margin: 1em 0 1.5em
-    width: 225px
+
+    // width: 225px
 
 /* adjust landmark images
 #landmark-1,

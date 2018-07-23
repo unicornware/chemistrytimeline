@@ -9,6 +9,7 @@ import $ from "jquery";
 import * as variables from "../config/variables.js";
 
 // components
+import LandmarkHexagon from "./LandmarkHexagon.jsx";
 import Modal from "./Modal.jsx";
 
 /**
@@ -17,7 +18,7 @@ import Modal from "./Modal.jsx";
  * @class Landmark
  * @extends React.Component
  */
-export default class Landmark extends React.Component {
+export default class LandmarkContainer extends React.Component {
   /**
    * Creates an instance of Landmark, and ties the state to props.
    *
@@ -69,13 +70,23 @@ export default class Landmark extends React.Component {
 
     return (
       <div className={containerStyle} id={data.century}>
-        {century}
-        <h1 className="landmark-year">{data.year}</h1>
-        <LandmarkInfo {...data} openModal={this.openModal} />
+        <div className="landmark-text">
+          {century}
+
+          <h1 className="landmark-year">{data.year}</h1>
+
+          <LandmarkInfo {...data} openModal={this.openModal} />
+        </div>
 
         <div className="landmark-line" />
 
-        <LandmarkHexagon {...data} openModal={this.openModal} />
+        <LandmarkHexagon
+          className="landmark"
+          adjust={data.adjust}
+          id={data.id}
+          image={data.image}
+          openModal={this.openModal}
+        />
       </div>
     );
   }
@@ -104,33 +115,5 @@ const LandmarkInfo = props => {
         Read More <i className="fas fa-chevron-right" />
       </a>
     </div>
-  );
-};
-
-/**
- * Class representing a point on the timeline.
- *
- * @class Landmark
- * @extends React.Component
- */
-/**
- * Functional component that contains the landmark image.
- * The outer div is styled to be shaped like a hexagon,
- * and functions as a button that can open the modal
- *
- * @param {*} props key, openModal, image, heading
- * @return div.landmark.hexagon: landmark image
- */
-const LandmarkHexagon = props => {
-  return (
-    <a
-      href={props.url}
-      target="_blank"
-      onClick={e => props.openModal(e)}
-      className="landmark hexagon"
-      id={props.id}
-    >
-      <img className="landmark-img" src={props.image} alt={props.heading} />
-    </a>
   );
 };

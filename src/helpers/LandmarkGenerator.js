@@ -2,7 +2,7 @@
 import * as React from "react";
 
 // components
-import Landmark from "../components/Landmark.jsx";
+import LandmarkContainer from "../components/LandmarkContainer.jsx";
 
 // data
 import landmarks from "../data/landmarks.json";
@@ -17,6 +17,30 @@ import landmarks from "../data/landmarks.json";
 export default class LandmarkGenerator {
   constructor() {
     this.landmarkData = landmarks;
+    this.needsAdjustment = [
+      "landmark-1",
+      "landmark-3",
+      "landmark-8",
+      "landmark-11",
+      "landmark-15",
+      "landmark-21",
+      "landmark-15",
+      "landmark-21",
+      "landmark-22",
+      "landmark-25",
+      "landmark-26",
+      "landmark-34",
+      "landmark-35",
+      "landmark-37",
+      "landmark-38",
+      "landmark-40",
+      "landmark-42",
+      "landmark-45",
+      "landmark-52",
+      "landmark-56",
+      "landmark-60",
+      "landmark-70"
+    ];
   }
 
   /**
@@ -31,13 +55,20 @@ export default class LandmarkGenerator {
 
     this.landmarkData.map((curr, i, landmarkData) => {
       let key = "landmark-" + i;
+      let adjust = this.adjustment(key);
 
       curr.key = key;
       curr.id = curr.key;
 
       this.link(curr, i, landmarkData);
 
-      let landmark = <Landmark {...curr} className={this.getClassName(i)} />;
+      let landmark = (
+        <LandmarkContainer
+          {...curr}
+          adjust={adjust}
+          className={this.getClassName(i)}
+        />
+      );
 
       return landmarksArr.push(landmark);
     });
@@ -90,4 +121,6 @@ export default class LandmarkGenerator {
 
     return className;
   };
+
+  adjustment = id => this.needsAdjustment.includes(id);
 }

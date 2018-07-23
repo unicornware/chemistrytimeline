@@ -66,11 +66,6 @@ button {
   font-size: 1.25em;
 }
 
-.hexagon {
-  -webkit-clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-  clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
-}
-
 .wrapper {
   height: 100%;
   width: 100%;
@@ -91,14 +86,13 @@ button {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  height: 200px;
+  width: 225px;
 }
 
-.hexagon:hover img, .hexagon:active img, .hexagon:focus img {
-  width: 175%;
-}
-
-.hexagon img {
-  width: 150%;
+.hexagon svg {
+  height: 100%;
+  width: 100%;
 }
 
 /* BEGIN COMPONENT STYLES
@@ -195,10 +189,20 @@ header .wrapper {
 }
 
 /* LANDMARK COMPONENT STYLES
- * COMPONENTS/LANDMARK.JSX
- * COMPONENTS/LANDMARK.SASS */
+ * COMPONENTS/LANDMARKCONTAINER.JSX
+ * COMPONENTS/LANDMARKCONTAINER.SASS */
 .landmark-container {
-  height: 322.5px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50%;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 @media all and (max-width: 48em) {
@@ -219,6 +223,7 @@ header .wrapper {
 
 @media all and (max-width: 40.625em) {
   .landmark-container {
+    border-bottom: 2.5px solid rgba(0, 0, 0, 0.125);
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: reverse !important;
     -ms-flex-direction: column-reverse !important;
@@ -226,7 +231,6 @@ header .wrapper {
     -webkit-box-pack: center !important;
     -ms-flex-pack: center !important;
     justify-content: center !important;
-    border-bottom: 2.5px solid rgba(255, 199, 44, 0.375);
     margin: 0 !important;
     padding: 2em 0 1em;
   }
@@ -238,11 +242,6 @@ header .wrapper {
 }
 
 /* special landmark-container classes */
-.landmark-container-top .landmark-line,
-.landmark-container-bttm .landmark-line {
-  height: 50px;
-}
-
 .landmark-container-top:not(.single) .landmark-heading,
 .landmark-container-bttm:not(.single) .landmark-heading {
   padding-left: 0.125em;
@@ -258,32 +257,27 @@ header .wrapper {
 }
 
 .landmark-container-top {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 @media all and (min-width: 48em) {
+  .landmark-container-top .landmark-line {
+    margin-top: 1.25em;
+  }
+
   .landmark-container-top.single {
-    margin-bottom: 135px;
+    margin-bottom: 127.5px;
   }
 
   .landmark-container-top.single .landmark-line {
-    margin-top: 12.5px;
+    margin-top: 2em;
   }
 
   .landmark-container-top:not(.single) {
-    padding-bottom: 3.5px;
+    padding-bottom: 3.25px;
   }
 
   .landmark-container-top .landmark-year {
@@ -296,19 +290,10 @@ header .wrapper {
 }
 
 .landmark-container-bttm {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
 }
 
 @media all and (min-width: 48em) {
@@ -323,15 +308,11 @@ header .wrapper {
   }
 
   .landmark-container-bttm.single {
-    margin-top: 135px;
-  }
-
-  .landmark-container-bttm.single .landmark-line {
-    margin-bottom: 12.5px;
+    margin-top: 122.5px;
   }
 
   .landmark-container-bttm:not(.single) {
-    padding-top: 3.5px;
+    padding-top: 3.25px;
   }
 
   .landmark-container-bttm:not(.single) .landmark-year {
@@ -341,7 +322,26 @@ header .wrapper {
 
 /* #landmark-0 container */
 .landmark-container-bttm.special {
-  margin-bottom: 67.5px;
+  margin-bottom: 90px;
+}
+
+.landmark-text {
+  height: 47.5px;
+}
+
+@media all and (max-width: 48em) {
+  .landmark-text {
+    height: auto;
+    margin-left: 2.1875em;
+    width: 70%;
+  }
+}
+
+@media all and (max-width: 40.625em) {
+  .landmark-text {
+    margin: -0.75em 0 0.375em 0;
+    width: auto;
+  }
 }
 
 .century,
@@ -350,7 +350,7 @@ header .wrapper {
 }
 
 .century {
-  color: #ffc72c;
+  color: rgba(255, 199, 44, 0.75);
   height: 0;
   font-size: 1.5em;
   margin: 0 0 1.5em 0;
@@ -359,7 +359,8 @@ header .wrapper {
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
   order: -1;
-  top: -37.5px;
+  right: 0;
+  top: -50px;
 }
 
 @media all and (max-width: 48em) {
@@ -371,7 +372,7 @@ header .wrapper {
 
 @media all and (max-width: 40.625em) {
   .century {
-    color: #004fa7;
+    color: #ffc72c;
     margin: 0;
     right: 0;
     top: 0.5em;
@@ -380,23 +381,21 @@ header .wrapper {
 
 .landmark-year {
   font-size: 1.875em;
-  height: 37.5px;
 }
 
 @media all and (max-width: 48em) {
   .landmark-year {
-    margin-bottom: 0.25em !important;
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
-    padding-right: 0.25em;
+    text-align: left;
   }
 }
 
 @media all and (max-width: 40.625em) {
   .landmark-year {
     font-size: 1.75em;
+    left: 0;
+    position: absolute;
     text-align: left;
+    top: 5px;
     width: 100%;
   }
 }
@@ -415,25 +414,6 @@ header .wrapper {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  height: 37.5px;
-}
-
-@media all and (max-width: 48em) {
-  .info {
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    height: 100%;
-    margin-left: 2.1875em;
-    width: 70%;
-  }
-}
-
-@media all and (max-width: 40.625em) {
-  .info {
-    height: auto;
-    margin-left: 0;
-    width: 100%;
-  }
 }
 
 .landmark-heading {
@@ -451,13 +431,13 @@ header .wrapper {
   .landmark-heading {
     color: #004fa7;
     font-size: 1.375em;
+    font-weight: 600;
     text-align: left;
   }
 }
 
 @media all and (max-width: 40.625em) {
   .landmark-heading {
-    font-weight: 600;
     text-align: center;
     width: 100%;
   }
@@ -514,11 +494,12 @@ header .wrapper {
 
 .landmark-line {
   border-left: 3px solid rgba(0, 0, 0, 0.25);
-  height: 75px;
+  height: 50px;
 }
 
 @media all and (max-width: 48em) {
   .landmark-line {
+    display: none;
     margin: 0 !important;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -531,27 +512,13 @@ header .wrapper {
   }
 }
 
-.landmark {
-  height: 200px;
-  width: 225px;
-}
-
 .landmark:hover, .landmark:active, .landmark:focus {
   cursor: pointer;
 }
 
-@media all and (max-width: 48em) {
-  .landmark {
-    height: 150px;
-    width: 200px;
-  }
-}
-
 @media all and (max-width: 40.625em) {
   .landmark {
-    height: 200px;
     margin: 1em 0 1.5em;
-    width: 225px;
   }
 }
 
@@ -654,7 +621,12 @@ header .wrapper {
 .modal-img-container {
   height: 200px;
   margin-left: 1em;
-  width: 235px;
+  width: 225px;
+}
+
+.modal-img-container svg {
+  height: 100%;
+  width: 100%;
 }
 
 .modal-body-text {
@@ -842,8 +814,8 @@ header .wrapper {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-top: 200px;
-    padding: 1em 1.75em 0;
+    margin-top: 150px;
+    padding: 0 1.75em;
   }
 }
 
@@ -861,7 +833,7 @@ header .wrapper {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 275px;
+  height: 645px;
 }
 
 @media all and (max-width: 48em) {
@@ -871,7 +843,6 @@ header .wrapper {
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
     height: auto;
-    padding: 0 0 2em;
     width: 100%;
   }
 }
@@ -883,12 +854,6 @@ header .wrapper {
 @media all and (max-width: 48em) {
   .timeline-col:nth-of-type(even) {
     margin: 0;
-  }
-}
-
-@media all and (max-width: 40.625em) {
-  .timeline-col {
-    padding-bottom: 0;
   }
 }
 

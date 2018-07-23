@@ -8,6 +8,9 @@ import $ from "jquery";
 // config
 import * as variables from "../config/variables.js";
 
+// components
+import LandmarkHexagon from "./LandmarkHexagon.jsx";
+
 /**
  * Class representing a modal. Users can view the landmark information
  * and navigate to other modals.
@@ -83,13 +86,19 @@ export default class Modal extends React.Component {
         <button onClick={this.closeModal} id="close">
           <i className="fas fa-times" />
         </button>
+
         <div className="modal-body">
           <button id="prev" onClick={this.previous}>
             <i className="fas fa-chevron-left" />
           </button>
-          <div className="modal-img-container hexagon">
-            <img src={data.image} alt={data.description} />
-          </div>
+
+          <LandmarkHexagon
+            className="modal-img-container"
+            adjust={data.adjust}
+            id={data.id}
+            image={data.image}
+          />
+
           <div className="modal-body-text">
             <p className="modal-landmark-year">{data.year}</p>
             <h1 className="modal-landmark-heading">{data.heading}</h1>
@@ -98,6 +107,7 @@ export default class Modal extends React.Component {
               Read More <i className="fas fa-chevron-right" />
             </a>
           </div>
+
           <button id="next" onClick={this.next}>
             <i className="fas fa-chevron-right" />
           </button>

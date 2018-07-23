@@ -186,7 +186,7 @@ header .wrapper {
     flex-direction: column-reverse !important;
     justify-content: center !important;
     margin: 0 !important;
-    padding: 2em 0 1em;
+    padding: 0.5em 0;
   }
 }
 
@@ -319,7 +319,7 @@ header .wrapper {
     color: #ffc72c;
     margin: 0;
     right: 0;
-    top: 0.5em;
+    top: 2.5em;
   }
 }
 
@@ -339,7 +339,7 @@ header .wrapper {
     left: 0;
     position: absolute;
     text-align: left;
-    top: 5px;
+    top: 2em;
     width: 100%;
   }
 }
@@ -685,7 +685,7 @@ header .wrapper {
 @media all and (max-width: 48em) {
   #timeline {
     flex-direction: column;
-    margin-top: 125px;
+    margin-top: 150px;
     padding: 0 1.75em;
   }
 }

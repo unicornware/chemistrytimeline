@@ -82,6 +82,7 @@ export default class LandmarkContainer extends React.Component {
 
         <LandmarkHexagon
           className="landmark"
+          url={data.url}
           adjust={data.adjust}
           id={data.id}
           image={data.image}

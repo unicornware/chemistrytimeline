@@ -70,7 +70,7 @@ To update the images, add the images to `public/assets/img/`. When referencing t
 
 1.  If you'd like to deploy to Firebase, you'll need to first set up a Firebase project in the [Firebase console](https://console.firebase.google.com/).
 
-2.  From the project overview page in the console, click **Add Firebasde to your web app**. You'll be presented with the following code snippet:
+2.  From the project overview page in the console, click **Add Firebase to your web app**. You'll be presented with the following code snippet:
 
     ```
     <script>

@@ -10,14 +10,14 @@ import * as React from "react";
  */
 export default class LandmarkHexagon extends React.Component {
   render() {
-    let { url, openModal, className, id, adjust, image } = this.props;
+    let { url, handleClick, className, id, adjust, image } = this.props;
     let patternId = id + "-image";
 
     return (
       <a
         href={url}
         target="_blank"
-        onClick={e => openModal(e)}
+        onClick={handleClick}
         className={className + " hexagon"}
         id={id}
       >

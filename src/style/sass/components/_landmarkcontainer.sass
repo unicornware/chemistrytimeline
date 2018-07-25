@@ -54,7 +54,7 @@
         margin-top: 2em
 
     &:not(.single)
-      padding-bottom: 3.25px
+      padding-bottom: 3.75px
 
     .landmark-year
       margin-top: 0.125em
@@ -76,7 +76,7 @@
       margin-top: 122.5px
 
     &:not(.single)
-      padding-top: 3.25px
+      padding-top: 3.75px
 
       .landmark-year
         margin-bottom: 0.125em
@@ -95,7 +95,7 @@
 
   @media all and (max-width: breakpoint(x-small))
     margin: (-0.75em) 0 0.375em 0
-    width: auto
+    width: 100%
 
 .century,
 .landmark-year
@@ -176,6 +176,10 @@
   font-size: 1em
   line-height: 1.5em
   margin: 0.25em 0
+
+  @media all and (max-width: breakpoint(acs-small))
+    // for ie
+    width: 100%
 
   @media all and (max-width: breakpoint(x-small))
     margin: 0

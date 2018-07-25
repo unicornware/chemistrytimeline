@@ -62,6 +62,10 @@ export default class Modal extends React.Component {
     this.setState({ data: this.state.data.next });
   };
 
+  openLink = () => {
+    window.open(this.state.data.url, "_blank");
+  };
+
   /**
    * When the modal is mounted onto div#modal-root,
    * a resize listener is attached to the window.
@@ -83,36 +87,50 @@ export default class Modal extends React.Component {
 
     return (
       <div className="modal">
-        <button onClick={this.closeModal} id="close">
-          <i className="fas fa-times" />
-        </button>
+        <ModalButton close onClick={this.closeModal} />
 
         <div className="modal-body">
-          <button id="prev" onClick={this.previous}>
-            <i className="fas fa-chevron-left" />
-          </button>
+          <ModalButton id="prev" onClick={this.previous} direction="left" />
 
           <LandmarkHexagon
             className="modal-img-container"
             adjust={data.adjust}
             id={data.id}
             image={data.image}
+            openLink={this.openLink}
           />
 
           <div className="modal-body-text">
             <p className="modal-landmark-year">{data.year}</p>
             <h1 className="modal-landmark-heading">{data.heading}</h1>
             <p className="modal-landmark-descrip">{data.description}</p>
-            <a href={data.url} className="modal-landmark-link">
+            <a href={data.url} target="_blank" className="modal-landmark-link">
               Read More <i className="fas fa-chevron-right" />
             </a>
           </div>
 
-          <button id="next" onClick={this.next}>
-            <i className="fas fa-chevron-right" />
-          </button>
+          <ModalButton id="next" onClick={this.next} direction="right" />
         </div>
       </div>
     );
   }
 }
+
+const ModalButton = props => {
+  let button;
+
+  if (props.close) {
+    button = (
+      <button onClick={props.onClick} id="close">
+        <i className="fas fa-times" />
+      </button>
+    );
+  } else {
+    button = (
+      <button id={props.id} onClick={props.onClick ? props.onClick : null}>
+        <i className={"fas fa-chevron-" + props.direction} />
+      </button>
+    );
+  }
+  return button;
+};

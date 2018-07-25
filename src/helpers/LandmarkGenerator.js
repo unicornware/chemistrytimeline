@@ -17,7 +17,7 @@ import landmarks from "../data/landmarks.json";
 export default class LandmarkGenerator {
   constructor() {
     this.landmarkData = landmarks;
-    this.needsAdjustment = [
+    this.needsAdjustment = new Set([
       "landmark-1",
       "landmark-3",
       "landmark-8",
@@ -40,7 +40,7 @@ export default class LandmarkGenerator {
       "landmark-56",
       "landmark-60",
       "landmark-70"
-    ];
+    ]);
   }
 
   /**
@@ -122,5 +122,5 @@ export default class LandmarkGenerator {
     return className;
   };
 
-  adjustment = id => this.needsAdjustment.includes(id);
+  adjustment = id => this.needsAdjustment.has(id);
 }

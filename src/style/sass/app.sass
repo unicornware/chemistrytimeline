@@ -1,8 +1,54 @@
 // charset declaration
 @charset "utf-8"
 
-//directory imports
+// directory imports
 @import abstracts/abstracts-dir
 @import base/base-dir
+
+#app-root
+  margin: 0 auto
+  width: 100%
+
+  @media all and (max-width: breakpoint(acs-small))
+    +flex(column, center, center)
+
+.timeline-container
+  +flex(row, center, center)
+
+  @media all and (max-width: breakpoint(acs-small))
+    width: 100%
+
+.btn-container
+  position: absolute
+  z-index: 5
+
+  &:first-of-type()
+    left: 25px
+
+    @media all and (min-width: breakpoint(x-large))
+      left: 10px
+
+  &:last-of-type()
+    right: 25px
+
+    @media all and (min-width: breakpoint(x-large))
+      right: 10px
+
+.btn-scroll-timeline
+  @extend %button
+
+  background-color: $blue
+  color: $white
+
+  &:first-of-type()
+    box-shadow: (-2.5px) 2.5px 5px 2.5px rgba($black, 0.25)
+
+  &:last-of-type()
+    box-shadow: 2.5px 2.5px 5px 2.5px rgba($black, 0.25)
+
+  @media all and (max-width: breakpoint(acs-small))
+    display: none
+
+// directory imports
 @import components/components-dir
 @import views/views-dir

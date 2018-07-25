@@ -6,7 +6,7 @@ import $ from "jquery";
 /**
  * Scrolls the timeline backwards.
  */
-function previous() {
+export function previous() {
   let amt = $("#timeline").scrollLeft() - $("#col-0").width() * 2.5;
   $("#timeline").animate({ scrollLeft: amt }, 375, "swing");
 }
@@ -14,10 +14,8 @@ function previous() {
 /**
  * Scrolls the timeline forward.
  */
-function next() {
+export function next() {
   let amt = $("#timeline").scrollLeft() + $("#col-0").width() * 2.5;
 
   $("#timeline").animate({ scrollLeft: amt }, 375, "swing");
 }
-
-export { previous, next };

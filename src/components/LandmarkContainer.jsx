@@ -86,7 +86,7 @@ export default class LandmarkContainer extends React.Component {
           adjust={data.adjust}
           id={data.id}
           image={data.image}
-          openModal={this.openModal}
+          handleClick={this.openModal}
         />
       </div>
     );

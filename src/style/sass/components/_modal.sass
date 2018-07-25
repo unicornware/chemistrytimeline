@@ -2,21 +2,49 @@
  * COMPONENTS/MODAL.JSX
  * COMPONENTS/MODAL.SASS
 
+#modal-root
+  display: none
+  align-items: center
+  background-color: rgba($black, 0.5)
+  flex-direction: row
+  height: 100vh
+  justify-content: center
+  left: 0
+  position: fixed
+  top: 0
+  width: 100vw
+  z-index: 999
+
+  &.show
+    display: flex !important
+
+  &.hide
+    display: none
+
+  @media all and (max-width: breakpoint(acs-small))
+    display: none
+
 .modal
   +flex(column, center, center)
 
   background-color: $white
-  height: 45%
-  max-height: 50%
+  height: 50%
+  max-height: 60%
   max-width: 75%
   overflow: visible
-  padding: 1em 2.5em
+  padding: 2em
   position: relative
-  width: 70%
+  width: 75%
 
-  @media all and (max-width: breakpoint(med))
-    width: 80%
-    max-width: 80%
+  @media all and (min-height: breakpoint(acs-med))
+    height: 35%
+
+  @media all and (min-width: breakpoint(x-large) + 1)
+    height: 42.5%
+    width: 60%
+
+  @media all and (max-width: breakpoint(acs-med))
+    height: 45%
 
 #close
   @extend %button
@@ -36,6 +64,9 @@
   height: auto
   margin-top: 1em
 
+  // for ie
+  width: 100%
+
 #prev, #next
   font-size: 2em
   padding: 0
@@ -54,24 +85,35 @@
   width: 60%
 
 .modal-landmark-year
-  font-size: 2em
-  margin: 0 0 0.25em
+  font:
+    size: 1.5em
+  margin: 0 0 -0.25em 0
 
 .modal-landmark-heading
   color: $blue
   font:
-    size: 2.25em
+    size: 2em
     weight: 700
   margin: 0
 
+  @media all and (max-width: breakpoint(acs-med))
+    font-size: 1.75em
+
 .modal-landmark-descrip
   font:
-    size: 1.2em
+    size: 1.125em
     weight: 300
-  margin: 0.5em 0 2em
+  margin: 0.5em 0 0.75em
+
+  @media all and (max-width: breakpoint(acs-med))
+    font-size: 1em
+    font-weight: 400
 
 .modal-landmark-link
   color: $black
   font:
     size: 1.25em
     weight: 600
+
+  @media all and (max-width: breakpoint(acs-med))
+    font-size: 1.125em

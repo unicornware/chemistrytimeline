@@ -102,7 +102,13 @@ export default class Modal extends React.Component {
 
           <div className="modal-body-text">
             <p className="modal-landmark-year">{data.year}</p>
-            <h1 className="modal-landmark-heading">{data.heading}</h1>
+            <a
+              href={data.url}
+              target="_blank"
+              className="modal-landmark-heading"
+            >
+              {data.heading}
+            </a>
             <p className="modal-landmark-descrip">{data.description}</p>
             <a href={data.url} target="_blank" className="modal-landmark-link">
               Read More <i className="fas fa-chevron-right" />

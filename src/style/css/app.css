@@ -696,7 +696,7 @@ header .wrapper {
 }
 
 .modal-landmark-link {
-  color: #000;
+  color: #000 !important;
   font-size: 1.25em;
   font-weight: 600;
 }

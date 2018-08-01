@@ -60,7 +60,7 @@ to
 import landmarks from "../data/{NAME_OF_YOUR_FILE}.json";
 ```
 
-To update the images, add the images to `public/assets/img/`. When referencing the images in the json file, the path should be `assets/img/{IMAGE_FILE_NAME}.{EXTENTSION}`.
+To update the images, add the images to `public/assets/img/`. When referencing the images in the json file, the path should be `/content/dam/acsorg/education/whatischemistry/landmarks/timeline/assets/img/{IMAGE_FILE_NAME}.{EXTENTSION}`. The images will appear broken on a local machine because the paths are set to work in AEM.
 
 ## Deployment
 

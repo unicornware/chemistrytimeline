@@ -110,7 +110,7 @@
   opacity: 0
   order: -1
   right: 0
-  top: -50px
+  top: 0
 
   @media all and (max-width: breakpoint(acs-small))
     height: auto
@@ -186,7 +186,9 @@
 
 .landmark-link
   align-self: flex-start
-  color: $black
+
+  // override aem visited link color
+  color: $black !important
   font:
     size: 1.05em
     weight: 600

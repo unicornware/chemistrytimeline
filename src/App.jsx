@@ -22,20 +22,18 @@ export default class App extends React.Component {
       <MemoryRouter>
         <React.Fragment>
           <Header />
+          <div className="btn-container">
+            <button className="btn-scroll-timeline" onClick={previous}>
+              <i className="fas fa-chevron-left" />
+            </button>
+          </div>
 
-          <div className="timeline-container">
-            <div className="btn-container">
-              <button className="btn-scroll-timeline" onClick={previous}>
-                <i className="fas fa-chevron-left" />
-              </button>
-            </div>
-            <Timeline />
+          <Timeline />
 
-            <div className="btn-container">
-              <button className="btn-scroll-timeline" onClick={next}>
-                <i className="fas fa-chevron-right" />
-              </button>
-            </div>
+          <div className="btn-container">
+            <button className="btn-scroll-timeline" onClick={next}>
+              <i className="fas fa-chevron-right" />
+            </button>
           </div>
         </React.Fragment>
       </MemoryRouter>

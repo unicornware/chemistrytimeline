@@ -5,16 +5,17 @@
 header
   +flex(row, center, center)
 
-  left: 0
-  margin-bottom: 1.25em
-  top: 0
   width: 100%
+
+  @media all and (min-width: breakpoint(acs-small))
+    margin-bottom: 1em
 
   @media all and (max-width: breakpoint(acs-small))
     background-color: $white
     box-shadow: 5px 0px 5px 2.5px rgba($black, 0.125)
     position: fixed
-    z-index: 5
+    top: 50px
+    z-index: 1000
 
   .wrapper
     +flex(column, center, center)

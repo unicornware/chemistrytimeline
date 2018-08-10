@@ -714,7 +714,7 @@ header .wrapper {
 @media all and (max-width: 48em) {
   #timeline {
     flex-direction: column;
-    margin-top: 137.5px;
+    margin-top: 50px;
     padding: 0 1.75em;
   }
 }

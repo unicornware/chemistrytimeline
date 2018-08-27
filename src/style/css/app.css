@@ -162,8 +162,8 @@ header {
   header {
     background-color: #fff;
     box-shadow: 5px 0px 5px 2.5px rgba(0, 0, 0, 0.125);
-    position: fixed;
-    top: 50px;
+    position: sticky;
+    top: 0;
     z-index: 1000;
   }
 }
@@ -714,7 +714,6 @@ header .wrapper {
 @media all and (max-width: 48em) {
   #timeline {
     flex-direction: column;
-    margin-top: 50px;
     padding: 0 1.75em;
   }
 }
